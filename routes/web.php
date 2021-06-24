@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdquisicionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\RevistaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::resource('departamentos',DepartamentoController::class);
+
+Route::resource('adquisicion',AdquisicionController::class);
+
+Route::resource('revistas',RevistaController::class);
+
+

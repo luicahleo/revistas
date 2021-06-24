@@ -5,6 +5,18 @@
             'route' => route('home'),
             'active' => request()->routeIs('home')
         ],
+
+        [
+            'name' => 'Adquisicion',
+            'route' => route('adquisicion.index'),
+            'active' => request()->routeIs('adquisicion.index')
+        ],
+
+        [
+            'name' => 'Revistas',
+            'route' => route('revistas.index'),
+            'active' => request()->routeIs('revistas.index')
+        ],
     ];
 @endphp
 
