@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `adquisicion` (
   `adquisicion` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `id_adquisicion` int(50) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_adquisicion`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `adquisicion`
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `coleccion` (
   `anyo_comp` tinyint(5) DEFAULT '0',
   `observaciones` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`coleccion_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=12327 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=12327 ;
 
 --
 -- Volcado de datos para la tabla `coleccion`
@@ -12187,7 +12187,7 @@ CREATE TABLE IF NOT EXISTS `coleccion_b` (
   `anyo_comp` tinyint(5) DEFAULT '0',
   `observaciones` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`coleccion_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=11923 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=11923 ;
 
 --
 -- Volcado de datos para la tabla `coleccion_b`
@@ -24141,7 +24141,7 @@ CREATE TABLE IF NOT EXISTS `departamento` (
   `catedra` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `id_departamento` int(30) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_departamento`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=23 ;
 
 --
 -- Volcado de datos para la tabla `departamento`
@@ -24183,7 +24183,7 @@ CREATE TABLE IF NOT EXISTS `departamentos` (
   `catedra` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `referencia` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=26 ;
 
 --
 -- Volcado de datos para la tabla `departamentos`
@@ -24224,7 +24224,7 @@ CREATE TABLE IF NOT EXISTS `depositada_en` (
   `deposito` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `id_deposito` int(50) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_deposito`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=22 ;
 
 --
 -- Volcado de datos para la tabla `depositada_en`
@@ -24263,7 +24263,7 @@ CREATE TABLE IF NOT EXISTS `distribucion` (
   `id_distribucion` int(50) NOT NULL AUTO_INCREMENT,
   `distribucion` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id_distribucion`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `distribucion`
@@ -24286,7 +24286,7 @@ CREATE TABLE IF NOT EXISTS `estanteria` (
   `estanteria` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `id_estanteria` int(50) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_estanteria`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `estanteria`
@@ -24315,7 +24315,7 @@ CREATE TABLE IF NOT EXISTS `idioma` (
   `siglas` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `idioma` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id_idioma`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `idioma`
@@ -24340,7 +24340,7 @@ CREATE TABLE IF NOT EXISTS `localizacion` (
   `siglas` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `posibilidades` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id_localizacion`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `localizacion`
@@ -24365,7 +24365,7 @@ CREATE TABLE IF NOT EXISTS `notas_bibliograficas` (
   `id_revista` int(50) NOT NULL DEFAULT '0',
   `notas` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`notas_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=1494 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=1494 ;
 
 --
 -- Volcado de datos para la tabla `notas_bibliograficas`
@@ -25885,7 +25885,7 @@ CREATE TABLE IF NOT EXISTS `pais` (
   `siglas` varchar(50) COLLATE latin1_spanish_ci NOT NULL,
   `pais` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id_pais`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=36 ;
 
 --
 -- Volcado de datos para la tabla `pais`
@@ -25939,7 +25939,7 @@ CREATE TABLE IF NOT EXISTS `responsables` (
   `unidad_solicitante` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `departamento` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id_responsable`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=22 ;
 
 --
 -- Volcado de datos para la tabla `responsables`
@@ -26019,7 +26019,7 @@ CREATE TABLE IF NOT EXISTS `revistas` (
   `responsable` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
   `id_revista` int(255) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_revista`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci PACK_KEYS=0 AUTO_INCREMENT=1578 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci PACK_KEYS=0 AUTO_INCREMENT=1578 ;
 
 --
 -- Volcado de datos para la tabla `revistas`
@@ -27324,7 +27324,7 @@ CREATE TABLE IF NOT EXISTS `Usuarios` (
   `nombreAdministrador` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `password` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `Usuarios`
