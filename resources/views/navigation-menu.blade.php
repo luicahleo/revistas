@@ -17,6 +17,12 @@
             'route' => route('revistas.index'),
             'active' => request()->routeIs('revistas.index')
         ],
+
+        [
+            'name' => 'Coleccion',
+            'route' => route('coleccion.index'),
+            'active' => request()->routeIs('coleccion.index')
+        ],
     ];
 @endphp
 

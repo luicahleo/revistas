@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Revista;
+use App\Models\Coleccion;
 use Illuminate\Http\Request;
 
-class RevistaController extends Controller
+class ColeccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,11 @@ class RevistaController extends Controller
      */
     public function index()
     {
-        $revistas = Revista::paginate(20);
+        $colecciones = Coleccion::all();
 
-        return $revistas;
+        //return $colecciones;
 
-        return view('revistas.index',compact('revistas'));
+        return view('coleccion.index', compact('colecciones'));
     }
 
     /**
@@ -45,10 +45,10 @@ class RevistaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Revista  $revista
+     * @param  \App\Models\Coleccion  $coleccion
      * @return \Illuminate\Http\Response
      */
-    public function show(Revista $revista)
+    public function show(Coleccion $coleccion)
     {
         //
     }
@@ -56,10 +56,10 @@ class RevistaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Revista  $revista
+     * @param  \App\Models\Coleccion  $coleccion
      * @return \Illuminate\Http\Response
      */
-    public function edit(Revista $revista)
+    public function edit(Coleccion $coleccion)
     {
         //
     }
@@ -68,10 +68,10 @@ class RevistaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Revista  $revista
+     * @param  \App\Models\Coleccion  $coleccion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Revista $revista)
+    public function update(Request $request, Coleccion $coleccion)
     {
         //
     }
@@ -79,10 +79,10 @@ class RevistaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Revista  $revista
+     * @param  \App\Models\Coleccion  $coleccion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Revista $revista)
+    public function destroy(Coleccion $coleccion)
     {
         //
     }

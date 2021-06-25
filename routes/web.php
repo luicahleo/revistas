@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdquisicionController;
+use App\Http\Controllers\ColeccionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\RevistaController;
@@ -30,5 +31,8 @@ Route::resource('departamentos',DepartamentoController::class);
 Route::resource('adquisicion',AdquisicionController::class);
 
 Route::resource('revistas',RevistaController::class);
+
+Route::resource('coleccion',ColeccionController::class);
+
 
 
