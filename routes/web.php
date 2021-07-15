@@ -4,6 +4,7 @@ use App\Http\Controllers\AdquisicionController;
 use App\Http\Controllers\ColeccionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RevistaController;
 
 /*
@@ -17,9 +18,7 @@ use App\Http\Controllers\RevistaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', HomeController::class )->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

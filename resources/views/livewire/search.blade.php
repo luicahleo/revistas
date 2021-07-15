@@ -10,7 +10,8 @@
     @if ($search)
         <ul class="absolute left-0 w-full bg-white mt-1 rounded-lg overflow-hidden">
                 @forelse ($this->results as $result)
-                    <li class="leading-10 px-5 text-sm cursor-pointer hover:bg-gray-300 ">{{$result->titulo}}</li>
+                    <li class="leading-10 px-5 text-sm cursor-pointer hover:bg-gray-300 ">
+                        <a href="{{route('revistas.show',$result)}}">{{$result->titulo}}</a></li>
 
                     @empty
                         <li class="leading-10 px-5 text-sm cursor-pointer hover:bg-gray-300 ">
