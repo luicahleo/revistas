@@ -1,11 +1,74 @@
-
 <x-app-layout>
 
+    <section class="bg-cover" style="background-image: url({{ asset('img/home/page-3189220_1920.jpg') }})">
 
-  
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
+            <div class="w-full md:w-3/4 lg:w-1/2">
+                <h1 class="text-white font-bold text-4xl">Prueba titulo</h1>
+                <p class="text-white text-lg mt-2 mb-4">pagian revistas</p>
 
-        @livewire('search')
+                <!-- component -->
+                <!-- This is an example component -->
+                <div class="pt-2 relative mx-auto text-gray-600">
+                    <input
+                        class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                        type="search" name="search" placeholder="Search">
+
+
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  absolute right-0 top-0 mt-2">
+
+                        Buscar
+                    </button>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <section class="mt-24 bg-gray-700 py-12">
+
+        <h1 class="text-center text-white text-3xl">Listado de revistas</h1>
+        <p class="text-center text-white">Consulta nuestro listado de todas las revistas</p>
     
+        <div class="flex justify-center mt-4">
+
+
+            <a href="{{route('revistas.index')}}"
+                class="bg-blue-500 font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
+                Catalogo de revistas
+            </a>
+        </div>
+    
+    
+    </section>
+
+
+    <section class="mt-24 py-12">
+
+        <h1 class="text-center text-gray-800 font-extrabold text-3xl">Últimas revistas</h1>
+    
+        <div class="flex justify-center mt-4">
+
+            
+
+        </div>
+    
+    
+    </section>
+
+
+    
+
 </x-app-layout>
 
 
@@ -15,7 +78,7 @@
 
 
 
-{{--<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -146,4 +209,4 @@
             </div>
         </div>
     </body>
-</html>--}}
+</html> --}}

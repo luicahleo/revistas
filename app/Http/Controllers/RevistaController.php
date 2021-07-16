@@ -16,8 +16,6 @@ class RevistaController extends Controller
     {
         $revistas = Revista::paginate(20);
 
-        return $revistas;
-
         return view('revistas.index',compact('revistas'));
     }
 
@@ -50,7 +48,7 @@ class RevistaController extends Controller
      */
     public function show(Revista $revista)
     {
-        //
+        
     }
 
     /**
