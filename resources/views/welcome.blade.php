@@ -39,35 +39,57 @@
 
         <h1 class="text-center text-white text-3xl">Listado de revistas</h1>
         <p class="text-center text-white">Consulta nuestro listado de todas las revistas</p>
-    
+
         <div class="flex justify-center mt-4">
 
 
-            <a href="{{route('revistas.index')}}"
+            <a href="{{ route('revistas.index') }}"
                 class="bg-blue-500 font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
                 Catalogo de revistas
             </a>
         </div>
-    
-    
+
+
     </section>
 
 
     <section class="mt-24 py-12">
 
         <h1 class="text-center text-gray-800 font-extrabold text-3xl">Últimas revistas</h1>
-    
+
         <div class="flex justify-center mt-4">
 
-            
+
 
         </div>
-    
-    
+
+        <!-- component -->
+
+        <div>
+            <table class="rounded-t-lg m-5 w-5/6 mx-auto text-gray-100 bg-gradient-to-l from-indigo-500 to-indigo-800">
+                <tr class="text-left border-b-2 border-indigo-300">
+                    <th class="px-4 py-3 font-bold text-2xl">Titulo</th>
+                    <th class="px-4 py-3 font-bold text-2xl">Editor</th>
+                    <th class="px-4 py-3 font-bold text-2xl">Materia</th>
+                    <th class="px-4 py-3 font-bold text-2xl">Pais</th>
+                </tr>
+
+                @foreach ($revistas as $revista)
+                    <tr class="border-b border-indigo-400">
+                        <td class="px-4 py-3 text-gray-300">{{ $revista->titulo }}</td>
+                        <td class="px-4 py-3 text-gray-300">{{ $revista->editor }}</td>
+                        <td class="px-4 py-3 text-gray-300">{{ $revista->materia }}</td>
+                        <td class="px-4 py-3 text-gray-300">{{ $revista->pais_origen }}</td>
+                    </tr>
+
+                @endforeach
+            </table>
+
+            <!-- gradient design -->
+        </div>
+        <div class="mb-20"></div>
+        <!-- fill for tailwind preview bottom overflow -->
     </section>
-
-
-    
 
 </x-app-layout>
 

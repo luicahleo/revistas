@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function __invoke()
     {
 
-        $revistas = Revista::orderBy('id_revista','desc')->get();
+        $revistas = Revista::orderBy('id_revista','desc')->take(10)->get();
 
         return view('welcome', compact('revistas'));
 
