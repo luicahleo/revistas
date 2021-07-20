@@ -23,6 +23,12 @@
             'route' => route('coleccion.index'),
             'active' => request()->routeIs('coleccion.index')
         ],
+
+        [
+            'name' => 'Idioma',
+            'route' => route('idioma.index'),
+            'active' => request()->routeIs('idioma.index')
+        ],
     ];
 @endphp
 

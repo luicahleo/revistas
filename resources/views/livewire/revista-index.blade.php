@@ -1,5 +1,20 @@
 <div>
 
+    <div>
+        @foreach ($departamentos as $departamento)
+            <li>
+                {{$departamento->departamento}}
+            </li>
+        @endforeach
+    </div>
+    <div>
+        @foreach ($idiomas as $idioma)
+            <li>
+                {{$idioma->idioma}}
+            </li>
+        @endforeach
+    </div>
+
     <div class="bg-gray-200 py-4 mb-10">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
@@ -9,14 +24,14 @@
             </button>
 
 
-            <!-- component dropdown categoria -->
+            <!-- component dropdown departamentos -->
             <div class="relative mr-4" x-data="{ open: false}">
 
                 <button
                     class=" bg-white shadow block h-12 rounded-lg overflow-hidden focus:outline-none px-4 text-gray-700 "
                     x-on:click="open = true">
-                    <i class="fas fa-tags text-sm mr-2 "></i>
-                    Categoria
+                    <i class="far fa-object-group mr-2"></i>
+                        Departamentos
                     <i class="fas fa-angle-down text-sm ml-2"></i>
                 </button>
 
