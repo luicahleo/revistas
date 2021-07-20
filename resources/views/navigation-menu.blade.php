@@ -7,28 +7,12 @@
         ],
 
         [
-            'name' => 'Adquisicion',
-            'route' => route('adquisicion.index'),
-            'active' => request()->routeIs('adquisicion.index')
-        ],
-
-        [
             'name' => 'Revistas',
             'route' => route('revistas.index'),
-            'active' => request()->routeIs('revistas.index')
+            'active' => request()->routeIs('revistas.*')
         ],
 
-        [
-            'name' => 'Coleccion',
-            'route' => route('coleccion.index'),
-            'active' => request()->routeIs('coleccion.index')
-        ],
-
-        [
-            'name' => 'Idioma',
-            'route' => route('idioma.index'),
-            'active' => request()->routeIs('idioma.index')
-        ],
+        
     ];
 @endphp
 

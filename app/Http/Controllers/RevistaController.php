@@ -47,15 +47,15 @@ class RevistaController extends Controller
      * @param  \App\Models\Revista  $revista
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Revista $revista)
     {
         //$revista = Revista::find($id);
        // return $revista;
-       $revista = Revista::find($id);
-       return $revista;
+       //$revista = Revista::find($revista);
 
+       
 
-       // return view('revistas.show',compact('revista'));
+       return view('revistas.show',compact('revista'));
     }
 
     /**

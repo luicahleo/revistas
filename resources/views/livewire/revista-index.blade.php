@@ -1,20 +1,5 @@
 <div>
 
-    <div>
-        @foreach ($departamentos as $departamento)
-            <li>
-                {{$departamento->departamento}}
-            </li>
-        @endforeach
-    </div>
-    <div>
-        @foreach ($idiomas as $idioma)
-            <li>
-                {{$idioma->idioma}}
-            </li>
-        @endforeach
-    </div>
-
     <div class="bg-gray-200 py-4 mb-10">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
@@ -31,54 +16,52 @@
                     class=" bg-white shadow block h-12 rounded-lg overflow-hidden focus:outline-none px-4 text-gray-700 "
                     x-on:click="open = true">
                     <i class="far fa-object-group mr-2"></i>
-                        Departamentos
+                    Departamentos
                     <i class="fas fa-angle-down text-sm ml-2"></i>
                 </button>
 
                 {{-- Dropdown body --}}
                 <div class="absolute right-0 w-40 mt-2 py-2 bg-white border rounded shadow-xl " x-show=" open "
                     x-on:click.away="open=false">
-                    <a href=""
-                        class="trasition-colors curation-200 block px-4 py-2 text-normal rounded hover:bg-gray-500 hover:text-white">prueba</a>
 
-                    <div class="py-2">
-                        <hr>
+                    @foreach ($departamentos as $departamento)
+                        <a 
+                            class="trasition-colors curation-200 block px-4 py-2 text-normal rounded hover:bg-blue-500 hover:text-white" 
+                            wire:click="$set('departamento_id',{{$departamento->id}})" 
+                            x-on:click="open = false">
+                            {{$departamento->departamento}}
+                        </a>
 
-                    </div>
+                    @endforeach
 
-                    <a href=""
-                        class="trasition-colors curation-200 block px-4 py-2 text-normal rounded hover:bg-gray-500 hover:text-white">
-                        Log out</a>
+
+
 
                 </div>
             </div>
 
-            <!-- component dropdown niveles -->
+            <!-- component dropdown idiomas -->
             <div class="relative" x-data="{ open: false}">
 
                 <button
                     class=" bg-white shadow block h-12 rounded-lg overflow-hidden focus:outline-none px-4 text-gray-700 "
                     x-on:click="open = true">
-                    <i class="fas fa-tags text-sm mr-2 "></i>
-                    Niveles
+                    <i class="fas fa-language text-sm mr-2 "></i>
+                    Idiomas
                     <i class="fas fa-angle-down text-sm ml-2"></i>
                 </button>
 
                 {{-- Dropdown body --}}
                 <div class="absolute right-0 w-40 mt-2 py-2 bg-white border rounded shadow-xl " x-show=" open "
                     x-on:click.away="open=false">
-                    <a href=""
-                        class="trasition-colors curation-200 block px-4 py-2 text-normal rounded hover:bg-gray-500 hover:text-white">prueba</a>
+                    @foreach ($idiomas as $idioma)
+                        <a 
+                            class="trasition-colors curation-200 block px-4 py-2 text-normal rounded hover:bg-blue-500 hover:text-white" 
+                            wire:click="$set('idioma_id',{{$idioma->id_idioma}})" 
+                            x-on:click="open = false">{{$idioma->idioma}}
+                        </a>
 
-                    <div class="py-2">
-                        <hr>
-
-                    </div>
-
-                    <a href=""
-                        class="trasition-colors curation-200 block px-4 py-2 text-normal rounded hover:bg-gray-500 hover:text-white">
-                        Log out</a>
-
+                    @endforeach
                 </div>
             </div>
         </div>

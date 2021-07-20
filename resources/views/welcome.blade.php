@@ -58,11 +58,9 @@
 
         <h1 class="text-center text-gray-800 font-extrabold text-3xl">Últimas revistas</h1>
 
-        <div class="flex justify-center mt-4">
+        {{-- <div class="flex justify-center mt-4">
 
-
-
-        </div>
+        </div> --}}
 
         <!-- component -->
 
