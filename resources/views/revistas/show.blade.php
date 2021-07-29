@@ -39,21 +39,29 @@
 
                 <section class="mt-6 bg-gray-200 py-6">
 
-            
+
                     <div class="flex justify-center mt-4">
-            
-            
+
+
                         <a href="{{ route('revistas.index') }}"
                             class="bg-blue-500 font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
                             <i class="fas fa-eye"></i> Historial
                         </a>
                     </div>
-            
-            
+
+
                 </section>
 
+                <section class="mt-6 bg-gray-200 py-6">
 
-                
+                    <div class="flex justify-center mt-4">
+                        @livewire('fondo')
+                    </div>
+
+
+
+                </section>
+
 
 
 
