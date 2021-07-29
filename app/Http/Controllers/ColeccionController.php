@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coleccion;
+use App\Models\Revista;
 use Illuminate\Http\Request;
 
 class ColeccionController extends Controller
@@ -50,7 +51,13 @@ class ColeccionController extends Controller
      */
     public function show(Coleccion $coleccion)
     {
-        //
+
+        $colecciones = Coleccion::where('id_revista',1490)->get();
+
+        //return $revista->id_revista;
+        return $colecciones;
+
+        //return view('coleccion.show', compact('coleccion'));
     }
 
     /**

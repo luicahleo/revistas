@@ -1,5 +1,8 @@
 <x-app-layout>
 
+
+    {{-- {{$fondos}} --}}
+
     {{-- Portada --}}
     <section class="bg-gray-200 py-12">
         <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -9,8 +12,7 @@
 
                 <!-- Tabla -->
                 <div>
-                    <table
-                        class="rounded-t-lg m-5 w-5/6 mx-auto text-gray-100 bg-blue-500">
+                    <table class="rounded-t-lg m-5 w-5/6 mx-auto text-gray-100 bg-blue-500">
 
                         <tr class="text-left border-b-2 border-indigo-300">
                             <th class="px-4 py-3 font-bold text-2xl">Titulo</th>
@@ -24,13 +26,37 @@
                             <td class="px-4 py-3 text-gray-300">{{ $revista->editor }}</td>
                             <td class="px-4 py-3 text-gray-300">{{ $revista->materia }}</td>
                             <td class="px-4 py-3 text-gray-300">{{ $revista->pais_origen }}</td>
-                            
+
                         </tr>
 
                     </table>
 
                     <!-- gradient design -->
                 </div>
+
+                <!-- Using utilities: -->
+
+
+                <section class="mt-6 bg-gray-200 py-6">
+
+            
+                    <div class="flex justify-center mt-4">
+            
+            
+                        <a href="{{ route('revistas.index') }}"
+                            class="bg-blue-500 font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
+                            <i class="fas fa-eye"></i> Historial
+                        </a>
+                    </div>
+            
+            
+                </section>
+
+
+                
+
+
+
                 <div class="mb-20"></div>
                 <!-- fill for tailwind preview bottom overflow -->
 

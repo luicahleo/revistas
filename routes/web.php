@@ -32,9 +32,12 @@ Route::resource('adquisicion',AdquisicionController::class);
 
 Route::resource('revistas',RevistaController::class);
 
+
 Route::resource('coleccion',ColeccionController::class);
 
 Route::resource('idioma',IdiomaController::class);
+
+
 
 
 

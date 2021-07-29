@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Coleccion;
 use App\Models\Revista;
 use Illuminate\Http\Request;
 
@@ -52,8 +53,6 @@ class RevistaController extends Controller
         //$revista = Revista::find($id);
        // return $revista;
        //$revista = Revista::find($revista);
-
-       
 
        return view('revistas.show',compact('revista'));
     }

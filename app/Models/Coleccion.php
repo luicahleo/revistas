@@ -11,4 +11,6 @@ class Coleccion extends Model
 
 
     protected $table = 'coleccion';
+    protected $primaryKey = 'coleccion_id';
+
 }
