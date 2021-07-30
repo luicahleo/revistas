@@ -79,13 +79,6 @@
         </table>
         <div class="mb-20"></div>
         <!-- fill for tailwind preview bottom overflow -->
-
-
-        
-
-
-
-
     </ul>
 
 </div>
