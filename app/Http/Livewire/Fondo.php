@@ -10,7 +10,11 @@ class Fondo extends Component
 {
     public function render()
     {
-        $colecciones = Coleccion::all();
+        $id_revista = 1457;
+
+        $fondos = Coleccion::where('id_revista',$id_revista)->orderBy('anyo','desc')->get();
+
+        //return $fondos;
 
         //return $colecciones;
 
@@ -21,7 +25,7 @@ class Fondo extends Component
         //return $colecciones;
 
         //return view('livewire.fondo',compact('colecciones'));
-        return view('livewire.fondo',compact('colecciones'));
+        return view('livewire.fondo',compact('fondos'));
 
     }
     public function getResultsProperty()
