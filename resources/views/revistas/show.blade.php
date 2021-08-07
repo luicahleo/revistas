@@ -35,38 +35,27 @@
                 </div>
 
                 <!-- Using utilities: -->
+                <div x-data="{ open: false }">
+                    <section class="mt-6 bg-gray-200 py-6">
+                        <div class="flex justify-center mt-4">
+                            <button
+                                class="bg-blue-500 font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6" x-on:click="open = true">
+                                <i class="fas fa-eye"></i> Historial
+                            </button>
+                        </div>
+                    </section>
+
+ 
+                    <section class="mt-6 bg-gray-200 py-6">
+                        <div class="flex justify-center mt-4" x-show="open" x-on:click.away="open = false">
+                            @livewire('fondo')
+                        </div>
+                    </section>
 
 
-                <section class="mt-6 bg-gray-200 py-6">
-
-
-                    <div class="flex justify-center mt-4">
-
-
-                        <a href="{{ route('revistas.index') }}"
-                            class="bg-blue-500 font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6">
-                            <i class="fas fa-eye"></i> Historial
-                        </a>
-                    </div>
-
-
-                </section>
-
-                <section class="mt-6 bg-gray-200 py-6">
-
-                    <div class="flex justify-center mt-4">
-                        @livewire('fondo')
-                    </div>
-
-
-
-                </section>
-
-
-
-
-                <div class="mb-20"></div>
-                <!-- fill for tailwind preview bottom overflow -->
+                    <div class="mb-20"></div>
+                    <!-- fill for tailwind preview bottom overflow -->
+                </div>
 
             </div>
         </div>
