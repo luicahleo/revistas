@@ -10,7 +10,9 @@ class Fondo extends Component
 {
     public function render()
     {
-        $id_revista = 1457;
+        //$id_revista = 1457;
+        TODO: 
+        FIXME: aqui esta el hardcode
 
         $fondos = Coleccion::where('id_revista',$id_revista)->orderBy('anyo','desc')->get();
 
