@@ -8,13 +8,13 @@ use App\Models\Coleccion;
 
 class Fondo extends Component
 {
+
+    public $id_revista;
+
     public function render()
     {
-        //$id_revista = 1457;
-        TODO: 
-        FIXME: aqui esta el hardcode
-
-        $fondos = Coleccion::where('id_revista',$id_revista)->orderBy('anyo','desc')->get();
+       
+        $fondos = Coleccion::where('id_revista',$this->id_revista)->orderBy('anyo','desc')->get();
 
         //return $fondos;
 
