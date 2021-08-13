@@ -25,6 +25,10 @@
 
         <!-- component -->
 
+
+        {{-- @livewire('fondo', ['id_revista' => $fondos->id_revista[0]]) --}}
+
+
         <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-800 text-gray-200">
             <thead class="bg-gray-800 text-white">
                 <tr>
@@ -43,7 +47,8 @@
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Nov.</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Dic.</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Notas</th>
-                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm border-gray-600">Acciones</th>
+                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm border-gray-600"></th>
+
                 </tr>
             </thead>
             <tbody class="text-gray-700">
@@ -67,9 +72,11 @@
                         <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->oct }} </td>
                         <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->nov }} </td>
                         <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->dic }} </td>
-                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->observaciones }}
-                        </td>
-                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700">Acciones </td>
+                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->observaciones }}</td>
+                        FIXME:
+                        {{-- <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a href="{{route('revistas.edit'->$fondo->coleccion_id)}}"><i class="far fa-edit"></i></a></td> --}}
+                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><i class="fas fa-upload"> {{$fondo->coleccion_id}}</i></td>
+                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><i class="fas fa-trash-alt"></i></td>
 
                     </tr>
 

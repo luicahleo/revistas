@@ -9,24 +9,16 @@ use App\Models\Coleccion;
 class Fondo extends Component
 {
 
+    //public $id_revista;
+
     public $id_revista;
+
 
     public function render()
     {
        
         $fondos = Coleccion::where('id_revista',$this->id_revista)->orderBy('anyo','desc')->get();
 
-        //return $fondos;
-
-        //return $colecciones;
-
-        //$id_revista = 1490;
-
-        //$colecciones = Coleccion::where('id_revista',$id_revista)->get();
-
-        //return $colecciones;
-
-        //return view('livewire.fondo',compact('colecciones'));
         return view('livewire.fondo',compact('fondos'));
 
     }

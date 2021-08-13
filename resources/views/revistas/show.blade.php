@@ -48,7 +48,7 @@
  
                     <section class="mt-6 bg-gray-200 py-6">
                         <div class="flex justify-center mt-4" x-show="open" x-on:click.away="open = false">
-                            @livewire('fondo')
+                            @livewire('fondo',['id_revista' => $revista->id_revista])
                         </div>
                     </section>
 
