@@ -28,7 +28,7 @@ class RevistaController extends Controller
      */
     public function create()
     {
-        //
+        return view('revistas.create');
     }
 
     /**

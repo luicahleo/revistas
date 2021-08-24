@@ -11,7 +11,11 @@
             'route' => route('revistas.index'),
             'active' => request()->routeIs('revistas.*')
         ],
-
+        [
+            'name' => 'Registrar nueva revista',
+            'route' => route('revistas.create'),
+            'active' => request()->routeIs('revistas.*')
+        ],
         
     ];
 @endphp
