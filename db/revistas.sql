@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-08-2021 a las 09:36:47
+-- Tiempo de generación: 31-08-2021 a las 10:27:28
 -- Versión del servidor: 5.1.73
 -- Versión de PHP: 5.3.3
 
@@ -12150,7 +12150,7 @@ INSERT INTO `coleccion` (`coleccion_id`, `id_revista`, `anyo`, `volumen`, `ene`,
 (12310, '38', '2021', '55', '525', '526', '527', '528', '529', '530', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12311, '137', '2021', '100', '1', '2*', '3', '4*', NULL, '6*', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '*Suplemento: Gas Processing'),
 (12312, '1576', '2020', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2607', NULL, NULL),
-(12313, '1576', '2021', NULL, NULL, '2609', NULL, '2611', '2612', '2613', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12313, '1576', '2021', NULL, NULL, '2609', NULL, '2611', '2612', '2613', NULL, '2615', NULL, NULL, NULL, NULL, NULL, NULL),
 (12316, '14', '2021', '179', '1', NULL, '2', NULL, NULL, '4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12320, '1337', '2001', '6', '1', NULL, NULL, '2', NULL, NULL, NULL, NULL, '3', NULL, NULL, NULL, NULL, NULL),
 (12318, '1573', '2021', NULL, '120', NULL, '121', NULL, '122', '123', '124', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
