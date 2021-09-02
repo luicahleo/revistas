@@ -96,9 +96,15 @@ class RoleController extends Controller
             'permissions'=>'required'
         ]);    
 
+        //actualizamos el campo nombre 
+
         //el metodo sync() elimina todos los permisos de determinado rol, y nuevamente los asigna con los parametros que le pasamos
         $role->permissions()->sync($request->permissions);
         
+        $role->update([
+            'name' => $request->name
+        ]);
+
         return redirect()->route('admin.roles.edit', $role);
     }
 

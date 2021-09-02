@@ -256,6 +256,14 @@ return [
             'text'        => 'Lista de roles',
             'route'         => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-users-cog',
+            'active'    => ['admin/roles*']
+            
+        ],
+        [
+            'text'        => 'Usuarios',
+            'route'         => 'admin.users.index',
+            'icon'        => 'fas fa-fw fa-users',
+            'active'    => ['admin/users*']
             
         ],
         ['header' => 'account_settings'],
@@ -443,5 +451,5 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Other-Configuration
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
