@@ -18,16 +18,16 @@ class PermissionSeeder extends Seeder
     {
         //Permisos
         Permission::create([
-            'name' => 'Registrar revista',
+            'name' => 'Registrar revistas',
         ]);
         Permission::create([
-            'name' => 'Leer revista',
+            'name' => 'Leer revistas',
         ]);
         Permission::create([
-            'name' => 'Actualizar revista',
+            'name' => 'Actualizar revistas',
         ]);
         Permission::create([
-            'name' => 'Eliminar revista',
+            'name' => 'Eliminar revistas',
         ]);
         Permission::create([
             'name' => 'Ver dashboard',

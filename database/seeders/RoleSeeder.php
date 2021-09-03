@@ -18,11 +18,15 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        Role::create([
-            'name' => 'Admin'
-        ]);
-        Role::create([
-            'name' => 'Hemeroteca'
-        ]);
+        $role = Role::create(['name' => 'Admin']);
+
+        $role->permissions()->attach([1,2,3,4,5,6,7,8,9,10,11]);
+        
+
+        $role = Role::create(['name' => 'Hemeroteca']);
+        //larave permissions nos permite de esta manera
+        $role->syncPermissions(['Registrar revistas', 'Leer revistas', 'Actualizar revistas', 'Eliminar revistas',]);
+
+
     }
 }

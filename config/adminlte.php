@@ -250,12 +250,17 @@ return [
             'text'        => 'Dashboard',
             'route'         => 'admin.home',
             'icon'        => 'fas fa-fw fa-tachometer-alt',
+            // para proteger esta ruta usamos el atributo can
+            'can'       => 'Ver dashboard'
             
         ],
         [
             'text'        => 'Lista de roles',
             'route'         => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-users-cog',
+            // para proteger esta ruta usamos el atributo can
+            'can'       => 'Listar role',
+            // este atributo hace que se permanezca activo durante toda la navegacion de la ruta 
             'active'    => ['admin/roles*']
             
         ],
@@ -263,6 +268,7 @@ return [
             'text'        => 'Usuarios',
             'route'         => 'admin.users.index',
             'icon'        => 'fas fa-fw fa-users',
+            'can'       => 'Leer usuarios',
             'active'    => ['admin/users*']
             
         ],

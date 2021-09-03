@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('', 'hemeroteca/revistas');
 
-Route::get('revistas',HemerotecaRevistas::class)->name('revistas.index');
+Route::get('revistas',HemerotecaRevistas::class)->middleware('can:Leer revistas')->name('revistas.index');
