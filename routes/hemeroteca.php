@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\Admin\HomeController;
-use App\Http\Livewire\HemerotecaRevistas;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Hemeroteca\RevistaController;
 
 Route::redirect('', 'hemeroteca/revistas');
 
-Route::get('revistas',HemerotecaRevistas::class)->middleware('can:Leer revistas')->name('revistas.index');
+//Route::get('revistas',HemerotecaRevistas::class)->middleware('can:Leer revistas')->names('revistas');
+
+Route::resource('revistas', RevistaController::class)->names('revistas');

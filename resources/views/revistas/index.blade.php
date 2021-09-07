@@ -22,6 +22,6 @@
         </div>
     </section>
 
-    @livewire('revista-index')
+    @livewire('revistas-index')
 
 </x-app-layout>

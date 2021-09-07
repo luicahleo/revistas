@@ -47,7 +47,6 @@
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Nov.</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Dic.</th>
                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Notas</th>
-                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm border-gray-600"></th>
 
                 </tr>
             </thead>
@@ -73,11 +72,7 @@
                         <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->nov }} </td>
                         <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->dic }} </td>
                         <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->observaciones }}</td>
-                        FIXME:
-                        {{-- <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a href="{{route('revistas.edit'->$fondo->coleccion_id)}}"><i class="far fa-edit"></i></a></td> --}}
-                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><i class="fas fa-upload"> {{$fondo->coleccion_id}}</i></td>
-                        <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><i class="fas fa-trash-alt"></i></td>
-
+                        
                     </tr>
 
                 @endforeach

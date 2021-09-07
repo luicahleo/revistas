@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\User;
@@ -8,7 +8,7 @@ use App\Models\User;
 //para usar la paginacion de livewire
 use Livewire\WithPagination;
 
-class AdminUsers extends Component
+class UsersIndex extends Component
 {
     //esta linea es necesaria para la paginacion con livewire
     use WithPagination;
@@ -28,7 +28,7 @@ class AdminUsers extends Component
                     ->paginate(8);
 
 
-        return view('livewire.admin-users', compact('users'));
+        return view('livewire.admin.users-index', compact('users'));
     }
 
     /**

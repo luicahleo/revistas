@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Hemeroteca;
 
 use App\Models\Revista;
 use Livewire\Component;
@@ -8,7 +8,7 @@ use Livewire\Component;
 //para que la paginacion sea dinamica
 use Livewire\WithPagination;
 
-class HemerotecaRevistas extends Component
+class RevistasIndex extends Component
 {
     use WithPagination;
 
@@ -24,7 +24,7 @@ class HemerotecaRevistas extends Component
         //return $revistas;
 
 
-        return view('livewire.hemeroteca-revistas',compact('revistas'));
+        return view('livewire.hemeroteca.revistas-index',compact('revistas'));
     }
 
 

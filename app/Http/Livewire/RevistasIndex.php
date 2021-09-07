@@ -9,7 +9,7 @@ use App\Models\Idioma;
 
 use Livewire\WithPagination;
 
-class RevistaIndex extends Component
+class RevistasIndex extends Component
 {
 
     use WithPagination;
@@ -42,6 +42,6 @@ class RevistaIndex extends Component
         //                     ->paginate(8);
 
 
-        return view('livewire.revista-index', compact('revistas', 'departamentos','idiomas'));
+        return view('livewire.revistas-index', compact('revistas', 'departamentos','idiomas'));
     }
 }
