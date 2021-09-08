@@ -65,7 +65,7 @@ class RevistaController extends Controller
      */
     public function edit(Revista $revista)
     {
-        //
+
     }
 
     /**

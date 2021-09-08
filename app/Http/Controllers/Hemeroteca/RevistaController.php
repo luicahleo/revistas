@@ -59,6 +59,8 @@ class RevistaController extends Controller
      */
     public function edit(Revista $revista)
     {
+        
+
         return view('hemeroteca.revistas.edit', compact('revista'));
 
     }
