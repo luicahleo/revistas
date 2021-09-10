@@ -97,7 +97,7 @@
                         {!! Form::text('catedra', $revista->catedra, ['class' => 'form-input block mt-1 rounded-lg']) !!}
                     </div>
                     <div>
-                        {!! Form::label('localizacion', 'Depositada En:') !!}
+                        {!! Form::label('localizacion', 'Localizacion: ') !!}
                         {!! Form::text('localizacion', $revista->localizacion, ['class' => 'form-input block mt-1 rounded-lg']) !!}
                     </div>
 
@@ -117,21 +117,54 @@
 
                 <div class="grid grid-cols-4 mb-4">
                     <div>
-                        FIXME::aqui se tiene que arregla rel checkbox
-                        {!! Form::checkbox('suscripcion_papel', $revista->suscripcion_papel, null, ['class' => 'text-indigo-500 w-8 h-8 mr-2 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
-                        {{ $revista->suscripcion_papel }}
-
-
+                        {!! Form::label('suscripcion_papel', 'Suscripcion papel', ['class' => 'inline-flex items-center']) !!}
+                        {!! Form::checkbox('suscripcion_papel', $revista->suscripcion_papel, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
                     </div>
                     <div>
-                        {!! Form::label('anyo_papel', 'Periodo') !!}
+                        {!! Form::label('anyo_papel', 'Periodo papel') !!}
                         {!! Form::text('anyo_papel', $revista->anyo_papel, ['class' => 'form-input block mt-1 rounded-lg']) !!}
                     </div>
-
                     <div>
-                        {!! Form::label('anyo_electronico', 'Periodo') !!}
+                        {!! Form::label('suscripcion_papel', 'Suscripcion Electronica', ['class' => 'inline-flex items-center']) !!}
+                        {!! Form::checkbox('suscripcion_papel', $revista->electronica_impresa, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+                    </div>
+                    <div>
+                        {!! Form::label('anyo_electronico', 'Periodo electronica') !!}
                         {!! Form::text('anyo_electronico', $revista->anyo_electronico, ['class' => 'form-input block mt-1 rounded-lg']) !!}
                     </div>
+                </div>
+
+                <div class="mb-4">
+                    {!! Form::label('fondos', 'Fondos') !!}
+                    {!! Form::text('fondos', null, ['class' => 'form-input rounded-lg block w-full mt-1']) !!}
+
+                </div>
+                <div class="grid grid-cols-3 mb-4">
+                    <div>
+                        {!! Form::label('web', 'Disponible de web', ['class' => 'inline-flex items-center']) !!}
+                        {!! Form::checkbox('web', $revista->web, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+                    </div>
+                    <div>
+                        {!! Form::label('indices_en_web', 'Indices en web', ['class' => 'inline-flex items-center']) !!}
+                        {!! Form::checkbox('indices_en_web', $revista->indices_en_web, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+                    </div>
+                    <div>
+                        {!! Form::label('full_text_en_web', 'Texto completo en web', ['class' => 'inline-flex items-center']) !!}
+                        {!! Form::checkbox('full_text_en_web', $revista->full_text_en_web, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+                    </div>
+                </div>
+                <div class="mb-4">
+                    {!! Form::label('revista_electronica', 'Acceso Electronico 1') !!}
+                    {!! Form::text('revista_electronica', null, ['class' => 'form-input rounded-lg block w-full mt-1']) !!}
+
+                </div>
+                <div class="mb-4">
+                    {!! Form::label('revista_electronica2', 'Acceso Electronico 2') !!}
+                    {!! Form::text('revista_electronica2', null, ['class' => 'form-input rounded-lg block w-full mt-1']) !!}
+                </div>
+
+                <div class="flex justify-center" >
+                    {!! Form::submit('Actualizar revista', ['class'=>'mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded']) !!}
                 </div>
                 {!! Form::close() !!}
 

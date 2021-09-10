@@ -1,14 +1,11 @@
 <div>
     <!-- component -->
     <div>
-
-
         <x-table-responsive>
-
             {{-- buscador --}}
-            <div class="px-6 py-4">
-                <input wire:keydown='limpiar_page' wire:model="search" class="form-input w-full shadow-sm"
-                    placeholder="Ingrese nombre de revista...">
+            <div class="px-6 py-4 flex">
+                <input wire:keydown='limpiar_page' wire:model="search" class=" pl-4 form-input flex-1 shadow-sm focus:outline-none" placeholder="Ingrese nombre de revista...">
+                <a class="btn btn-danger ml-2" href="{{route('hemeroteca.revistas.create')}}">Insertar nueva revista</a>
             </div>
             @if ($revistas->count())
                 <!--  tabla que muestra lista de revistas-->
