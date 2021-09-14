@@ -1,0 +1,15 @@
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+ErrorDocument 404 /adq/
+
+# Usar este metodo si se requiere descargar ficheros
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule $ index.php [L]
+
+# Usar este metodo si no se requiere descarga de ficheros.
+RewriteRule !\.(js|ico|gif|jpg|png|css|csv)$ index.php [L]
+
+
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript

@@ -1,0 +1,37 @@
+#Fichero robots.txt del servidor bibing.us.es - Biblioteca de Ingenieros de Sevilla
+User-agent: *
+# Ficheros
+Disallow:/ereding.ris
+Disallow:/ereding2.ris
+Disallow:/mshflxgd.ocx
+Disallow:/bib-evirtual/index2.html
+Disallow:/bib-evirtual/index2.bak
+# Directorios
+Disallow:/alfa/
+Disallow:/analytics_auto/
+Disallow:/consultas/
+Disallow:/estado_salas/PRU/
+Disallow:/reserva_sala_formacion/
+Disallow:/reserva/
+Disallow:/rsp/
+Disallow:/Evirtual/
+Disallow:/ficheros_temporales/
+Disallow:/gestor_ereding/
+Disallow:/hemeroteca/web/admin/
+Disallow:/oculus/
+Disallow:/p_oculus/
+Disallow:/oculusplus/
+Disallow:/oculusplus2/
+Disallow:/php/
+Disallow:/phpmyadmin/
+Disallow:/publicaciones/
+Disallow:/Publicaciones2/
+Disallow:/publicacionesETSI/
+Disallow:/signaturas/
+Disallow:/vinci/admin/
+Disallow:/webalizer/
+Disallow:/contadores/
+Disallow:/galeria_na/
+Disallow:/git/
+# El propio fichero robots.txt
+Disallow:/robots.txt

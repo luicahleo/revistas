@@ -25,7 +25,12 @@ class RevistaController extends Controller
      */
     public function create()
     {
-        return view('hemeroteca.revistas.create');
+
+        $revista = Revista::all();
+        
+        //return $revista;
+
+        return view('hemeroteca.revistas.create', compact('revista'));
     }
 
     /**
