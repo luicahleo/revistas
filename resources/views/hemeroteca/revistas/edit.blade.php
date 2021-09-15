@@ -27,7 +27,7 @@
                 @include('hemeroteca.revistas.partials.form')
 
                 <div class="flex justify-center">
-                    {!! Form::submit('Actualizar revista', ['class' => 'mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded']) !!}
+                    {!! Form::submit('Actualizar revista', ['class' => 'mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer']) !!}
                 </div>
                 {!! Form::close() !!}
 

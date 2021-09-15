@@ -27,7 +27,7 @@ class RevistaController extends Controller
     {
 
         $revista = Revista::all();
-        
+
         //return $revista;
 
         return view('hemeroteca.revistas.create', compact('revista'));
@@ -41,7 +41,21 @@ class RevistaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       // return $request;
+
+
+        $request->validate([
+            'titulo' => 'required',
+            'pais_origen' => 'required',
+            'idioma' => 'required',
+
+        ]);
+
+        $revista = Revista::create($request->all());
+        
+        //return $revista;
+        return redirect()->route('hemeroteca.revistas.edit', $revista);
     }
 
     /**
@@ -53,7 +67,6 @@ class RevistaController extends Controller
     public function show(Revista $revista)
     {
         return view('hemeroteca.revistas.show', compact('revista'));
-
     }
 
     /**
@@ -64,10 +77,9 @@ class RevistaController extends Controller
      */
     public function edit(Revista $revista)
     {
-        
+
 
         return view('hemeroteca.revistas.edit', compact('revista'));
-
     }
 
     /**
@@ -79,7 +91,16 @@ class RevistaController extends Controller
      */
     public function update(Request $request, Revista $revista)
     {
-        //
+        $request->validate([
+            'titulo' => 'required',
+            'pais_origen' => 'required',
+            'idioma' => 'required',
+
+        ]);
+
+        $revista->update($request->all());
+
+        return redirect()->route('hemeroteca.revistas.edit' , $revista);
     }
 
     /**

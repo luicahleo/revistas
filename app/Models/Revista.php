@@ -11,6 +11,10 @@ class Revista extends Model
     protected $primaryKey = 'id_revista';
 
 
+    const CREATED_AT = null;
+    const UPDATED_AT = null;
+    public $timestamp = false;
+
     public function scopeDepartamento($query, $departamento_id){
         if($departamento_id){
             return $query->where('id_departamento', $departamento_id);
@@ -23,7 +27,7 @@ class Revista extends Model
         }
     }
 
-
+    protected $fillable = ['titulo', 'pais_origen', 'idioma'];
 
 
 

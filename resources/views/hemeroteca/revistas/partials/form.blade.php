@@ -1,6 +1,10 @@
 <div class="mb-4">
     {!! Form::label('titulo', 'Titulo de la revista') !!}
-    {!! Form::text('titulo', null, ['class' => 'form-input rounded-lg block w-full mt-1']) !!}
+    {!! Form::text('titulo', null, ['class' => 'form-input rounded-lg block w-full mt-1' . ($errors->has('titulo') ? ' border-red-600' : '')]) !!}
+
+    @error('titulo')
+        <strong class="text-xs text-red-600">{{ $message }}</strong>
+    @enderror
 
 </div>
 
@@ -8,7 +12,7 @@
 
     <div>
         {!! Form::label('acronimo_GLAS', 'Registro de pedido') !!}
-        {!! Form::text('acronimo_GLAS',null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
+        {!! Form::text('acronimo_GLAS', null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
     </div>
     <div>
         {!! Form::label('periodicidad', 'Periodicidad') !!}
@@ -16,11 +20,19 @@
     </div>
     <div>
         {!! Form::label('pais_origen', 'Pais') !!}
-        {!! Form::text('pais_origen', null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
+        {!! Form::text('pais_origen', null, ['class' => 'form-input block mt-1 rounded-lg' . ($errors->has('pais_origen') ? ' border-red-600' : '')]) !!}
+
+        @error('pais_origen')
+            <strong class="text-xs text-red-600">{{ $message }}</strong>
+        @enderror
     </div>
     <div>
         {!! Form::label('idioma', 'Idioma') !!}
-        {!! Form::text('idioma', null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
+        {!! Form::text('idioma', null, ['class' => 'form-input block mt-1 rounded-lg' . ($errors->has('idioma') ? ' border-red-600' : '')]) !!}
+
+        @error('idioma')
+            <strong class="text-xs text-red-600">{{ $message }}</strong>
+        @enderror
     </div>
 
     <div>

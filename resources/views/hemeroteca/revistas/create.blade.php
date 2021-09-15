@@ -4,11 +4,11 @@
             <div class="card-body">
                 <h1 class="text-2xl font-bold mb-4">REGISTRAR NUEVA REVISTA</h1>
 
-                {!! Form::open(['route' => 'hemeroteca.revistas.store']) !!}
+                {!! Form::open(['route' => 'hemeroteca.revistas.store', 'file' => true, 'autocomplete' => 'off']) !!}
                 @include('hemeroteca.revistas.partials.form')
 
                 <div class="flex justify-center">
-                    {!! Form::submit('Registrar nueva revista', ['class' => 'btn btn-primary']) !!}
+                    {!! Form::submit('Registrar nueva revista', ['class' => 'btn btn-primary cursor-pointer']) !!}
                 </div>
 
                 {!! Form::close() !!}
