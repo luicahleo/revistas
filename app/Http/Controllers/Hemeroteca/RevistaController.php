@@ -49,13 +49,18 @@ class RevistaController extends Controller
             'titulo' => 'required',
             'pais_origen' => 'required',
             'idioma' => 'required',
+            'materia' => 'required',
+            'editor' => 'required',
+            'ISSN' => 'required',
+
 
         ]);
 
         $revista = Revista::create($request->all());
         
         //return $revista;
-        return redirect()->route('hemeroteca.revistas.edit', $revista);
+        //return redirect()->route('hemeroteca.revistas.edit', $revista);
+        return redirect()->route('hemeroteca.revistas.index');
     }
 
     /**

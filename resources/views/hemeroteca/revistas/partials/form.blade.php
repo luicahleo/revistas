@@ -37,7 +37,11 @@
 
     <div>
         {!! Form::label('ISSN', 'ISSN impreso') !!}
-        {!! Form::text('ISSN', null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
+        {!! Form::text('ISSN', null, ['class' => 'form-input block mt-1 rounded-lg' . ($errors->has('ISSN') ? ' border-red-600' : '')]) !!}
+
+        @error('issn')
+        <strong class="text-xs text-red-600">{{ $message }}</strong>
+    @enderror
     </div>
     <div>
         {!! Form::label('ISSN_version_e', 'ISSN Electronico') !!}
@@ -47,13 +51,19 @@
 
 <div class="mb-4">
     {!! Form::label('editor', 'Editor') !!}
-    {!! Form::text('editor', null, ['class' => 'form-input rounded-lg block w-full mt-1']) !!}
-
+    {!! Form::text('editor', null, ['class' => 'form-input rounded-lg block w-full mt-1' . ($errors->has('editor') ? ' border-red-600' : '')]) !!}
+   
+    @error('editor')
+        <strong class="text-xs text-red-600">{{ $message }}</strong>
+    @enderror
 </div>
 <div class="mb-4">
     {!! Form::label('materia', 'Materia') !!}
-    {!! Form::text('materia', null, ['class' => 'form-input rounded-lg block w-full mt-1']) !!}
+    {!! Form::text('materia', null, ['class' => 'form-input rounded-lg block w-full mt-1' . ($errors->has('materia') ? ' border-red-600' : '')]) !!}
 
+    @error('materia')
+        <strong class="text-xs text-red-600">{{ $message }}</strong>
+    @enderror
 </div>
 <div class="mb-4">
     {!! Form::label('direccion_url', 'URL') !!}

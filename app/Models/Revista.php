@@ -27,7 +27,7 @@ class Revista extends Model
         }
     }
 
-    protected $fillable = ['titulo', 'pais_origen', 'idioma'];
+    protected $fillable = ['titulo', 'pais_origen', 'idioma', 'ISSN', 'materia', 'editor'];
 
 
 
