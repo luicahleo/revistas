@@ -128,6 +128,7 @@ class ComposerStaticInit4d42d81917486342e8fce48c3a366b2c
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
             'League\\CommonMark\\' => 18,
+            'Laraveles\\Spanish\\' => 18,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
@@ -413,6 +414,10 @@ class ComposerStaticInit4d42d81917486342e8fce48c3a366b2c
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
         ),
+        'Laraveles\\Spanish\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laraveles/spanish/src',
+        ),
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
@@ -607,6 +612,7 @@ class ComposerStaticInit4d42d81917486342e8fce48c3a366b2c
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\Admin\\UsersIndex' => __DIR__ . '/../..' . '/app/Http/Livewire/Admin/UsersIndex.php',
         'App\\Http\\Livewire\\Fondo' => __DIR__ . '/../..' . '/app/Http/Livewire/Fondo.php',
+        'App\\Http\\Livewire\\Hemeroteca\\RevistasCurriculum' => __DIR__ . '/../..' . '/app/Http/Livewire/Hemeroteca/RevistasCurriculum.php',
         'App\\Http\\Livewire\\Hemeroteca\\RevistasIndex' => __DIR__ . '/../..' . '/app/Http/Livewire/Hemeroteca/RevistasIndex.php',
         'App\\Http\\Livewire\\RevistasIndex' => __DIR__ . '/../..' . '/app/Http/Livewire/RevistasIndex.php',
         'App\\Http\\Livewire\\Search' => __DIR__ . '/../..' . '/app/Http/Livewire/Search.php',
@@ -637,6 +643,7 @@ class ComposerStaticInit4d42d81917486342e8fce48c3a366b2c
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
+        'App\\View\\Components\\HemerotecaLayout' => __DIR__ . '/../..' . '/app/View/Components/HemerotecaLayout.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -1486,6 +1493,7 @@ class ComposerStaticInit4d42d81917486342e8fce48c3a366b2c
         'Faker\\Provider\\nl_BE\\Payment' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/Payment.php',
         'Faker\\Provider\\nl_BE\\Person' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/Person.php',
         'Faker\\Provider\\nl_BE\\PhoneNumber' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/PhoneNumber.php',
+        'Faker\\Provider\\nl_BE\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/Text.php',
         'Faker\\Provider\\nl_NL\\Address' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_NL/Address.php',
         'Faker\\Provider\\nl_NL\\Color' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_NL/Color.php',
         'Faker\\Provider\\nl_NL\\Company' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_NL/Company.php',
@@ -2995,6 +3003,8 @@ class ComposerStaticInit4d42d81917486342e8fce48c3a366b2c
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Laraveles\\Spanish\\Commands\\InstallLang' => __DIR__ . '/..' . '/laraveles/spanish/src/Commands/InstallLang.php',
+        'Laraveles\\Spanish\\SpanishServiceProvider' => __DIR__ . '/..' . '/laraveles/spanish/src/SpanishServiceProvider.php',
         'League\\CommonMark\\Block\\Element\\AbstractBlock' => __DIR__ . '/..' . '/league/commonmark/src/Block/Element/AbstractBlock.php',
         'League\\CommonMark\\Block\\Element\\AbstractStringContainerBlock' => __DIR__ . '/..' . '/league/commonmark/src/Block/Element/AbstractStringContainerBlock.php',
         'League\\CommonMark\\Block\\Element\\BlockQuote' => __DIR__ . '/..' . '/league/commonmark/src/Block/Element/BlockQuote.php',

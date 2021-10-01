@@ -25,6 +25,7 @@ class UsersIndex extends Component
         //para la paginacion
         $users = User::where('name', 'LIKE', '%' . $this->search . '%')
                     ->orWhere('email', 'LIKE', '%' . $this->search . '%')
+                    ->orderBy('id','desc')
                     ->paginate(8);
 
 
