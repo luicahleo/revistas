@@ -1,5 +1,6 @@
 <x-hemeroteca-layout>
 
+    {{-- C41 --}}
 {{-- creamos slot con combre para pasar la variable $revista a la plantilla hemeroteca.blade.php , pero solo pasaremos el id de la revista --}}
     <x-slot name="revista">
         {{ $revista->id_revista}}

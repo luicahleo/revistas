@@ -27,8 +27,6 @@
     <div class="min-h-screen bg-gray-100">
         @livewire('navigation-menu')
 
-
-
         <!-- Page Content -->
         <div class="container py-8 grid grid-cols-5">
 
@@ -38,13 +36,17 @@
                 </h1>
 
                 <ul class="text-sm text-gray-600 ">
-                    <li class="leading-7 mb-1 border-l-4 @routeIs('hemeroteca.revistas.edit', $revista) border-indigo-400 @else border-transparent  @endif pl-2 " > <a href="{{ route('hemeroteca.revistas.edit', $revista)}}"> Informacion de la revista
+                    <li
+                    {{-- C41 aqui creo mi propia directiva blade @routeIs --}}
+                        class="leading-7 mb-1 border-l-4 @routeIs('hemeroteca.revistas.edit', $revista) border-indigo-400 @else border-transparent  @endif pl-2 ">
+                        <a href="{{ route('hemeroteca.revistas.edit', $revista) }}"> Informacion de la revista
                         </a>
                     </li>
-                    <li class="leading-7 mb-1 border-l-4 @routeIs('hemeroteca.revistas.curriculum', $revista) border-indigo-400 @else border-transparent  @endif pl-2"><a href="{{ route('hemeroteca.revistas.curriculum', $revista)}}"> Documentos de la revista
+                    <li
+                        class="leading-7 mb-1 border-l-4 @routeIs('hemeroteca.revistas.curriculum', $revista) border-indigo-400 @else border-transparent  @endif pl-2">
+                        <a href="{{ route('hemeroteca.revistas.curriculum', $revista) }}"> Documentos de la revista
                         </a> </li>
-                    <li class="leading-7 mb-1 border-l-4 border-transparent pl-2"><a href=""> Materia </a> </li>
-                    <li class="leading-7 mb-1 border-l-4 border-transparent pl-2"><a href=""> ISSN </a> </li>
+                   
                 </ul>
             </aside>
 
