@@ -10,6 +10,10 @@
     <hr class="mt-2 mb-6 ">
 
     {{-- mostramos las secciones --}}
+    <TODO>
+        <::></::>
+    </TODO>
+    {{-- aqui voy a mostrar un formulario para subir pdf de las revistas --}}
 
 
 </div>
