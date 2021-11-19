@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 07-10-2021 a las 09:52:11
+-- Tiempo de generación: 19-11-2021 a las 08:14:54
 -- Versión del servidor: 5.1.73
 -- Versión de PHP: 5.3.3
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `coleccion` (
   `anyo_comp` tinyint(5) DEFAULT '0',
   `observaciones` varchar(255) COLLATE latin1_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`coleccion_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=12332 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci AUTO_INCREMENT=12334 ;
 
 --
 -- Volcado de datos para la tabla `coleccion`
@@ -12075,7 +12075,7 @@ INSERT INTO `coleccion` (`coleccion_id`, `id_revista`, `anyo`, `volumen`, `ene`,
 (12217, '206', '2019', '27', NULL, NULL, '107', NULL, NULL, '108', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12218, '38', '2019', '53', '507', '508', '509', '510', '511', '512', NULL, NULL, '513', '514', '515', NULL, NULL, NULL),
 (12233, '1476', '2018', '53', NULL, NULL, NULL, '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12234, '1476', '2019', '54', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12234, '1476', '2019', '54', '1', '2', NULL, '3', '4', NULL, '5', '6', NULL, NULL, NULL, NULL, NULL, NULL),
 (12235, '1524', '2019', NULL, NULL, NULL, NULL, '49', NULL, NULL, '50', NULL, '51', NULL, NULL, NULL, NULL, NULL),
 (12236, '1568', '2019', NULL, NULL, NULL, NULL, '64', NULL, NULL, NULL, NULL, NULL, '65', NULL, '66*-67', NULL, '* nº Especial'),
 (12237, '693', '2019', '70', NULL, NULL, NULL, '287', NULL, NULL, NULL, '288', NULL, NULL, '289', 'Monografía nº 33', NULL, NULL),
@@ -12125,35 +12125,35 @@ INSERT INTO `coleccion` (`coleccion_id`, `id_revista`, `anyo`, `volumen`, `ene`,
 (12286, '2', '2020', '117', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '6', NULL, NULL, NULL),
 (12284, '1', '2019', '116', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12285, '1', '2020', '117', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '6', NULL, NULL, NULL),
-(12288, '1172', '2021', '48/49', '1', '2', '3', '4', '5', '6', '/1', NULL, '3', '4', NULL, NULL, NULL, NULL),
+(12288, '1172', '2021', '48/49', '1', '2', '3', '4', '5', '6', '/1', NULL, '3', '4', '5', NULL, NULL, NULL),
 (12289, '1297', '2021', NULL, NULL, '300', '301', '302', '303', '304', '305', NULL, NULL, '306', NULL, NULL, NULL, NULL),
-(12290, '1562', '2021', '31', '1', '2', '3', '4', '5', '6', '7', '8', '9', NULL, NULL, NULL, NULL, NULL),
-(12291, '1195', '2021', NULL, '425', '426', '427', '428', '429', '430', '431', NULL, '433', '434', NULL, NULL, NULL, NULL),
-(12292, '639', '2021', NULL, '289', '290', '291', '292', '293', '294', NULL, NULL, '296', NULL, NULL, NULL, NULL, NULL),
-(12293, '1196', '2021', NULL, '439', NULL, '441', '442', '443', '444', '445', '446', '447', '448', NULL, NULL, NULL, NULL),
-(12294, '1422', '2021', NULL, '463', '464', '465', '466', '467', '468', '469', '470', '471', '472', NULL, NULL, NULL, NULL),
+(12290, '1562', '2021', '31', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', NULL, NULL, NULL),
+(12291, '1195', '2021', NULL, '425', '426', '427', '428', '429', '430', '431', NULL, '433', '434', '435', NULL, NULL, NULL),
+(12292, '639', '2021', NULL, '289', '290', '291', '292', '293', '294', NULL, NULL, '296', '297', NULL, NULL, NULL, NULL),
+(12293, '1196', '2021', NULL, '439', NULL, '441', '442', '443', '444', '445', '446', '447', '448', '449', NULL, NULL, NULL),
+(12294, '1422', '2021', NULL, '463', '464', '465', '466', '467', '468', '469', '470', '471', '472', '473', NULL, NULL, NULL),
 (12295, '813', '2021', NULL, NULL, '586', NULL, '587', NULL, '588', NULL, '589', NULL, NULL, NULL, NULL, NULL, NULL),
-(12296, '1298', '2021', NULL, '513', '514', '515', '516', '517', '518', '519', '520', NULL, NULL, NULL, NULL, NULL, NULL),
-(12297, '1537', '2021', '69', NULL, NULL, '3', '4', NULL, NULL, NULL, '8', NULL, NULL, NULL, NULL, NULL, NULL),
-(12298, '1570', '2021', NULL, '280', '281', '282', '283', '284', '285', '286', '287', '288', '289', NULL, NULL, NULL, NULL),
+(12296, '1298', '2021', NULL, '513', '514', '515', '516', '517', '518', '519', '520', NULL, '521', '522', NULL, NULL, NULL),
+(12297, '1537', '2021', '69', NULL, NULL, '3', '4', NULL, NULL, NULL, '8', '3/108*', NULL, NULL, NULL, NULL, 'Nº Especial'),
+(12298, '1570', '2021', NULL, '280', '281', '282', '283', '284', '285', '286', '287', '288', '289', '290', NULL, NULL, NULL),
 (12299, '1544', '2021', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12300, '693', '2021', '72', NULL, NULL, NULL, '293', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12301, '1102', '2021', '57', NULL, NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12300, '693', '2021', '72', NULL, NULL, NULL, '293', NULL, NULL, NULL, NULL, NULL, '294/295', NULL, NULL, NULL, NULL),
+(12301, '1102', '2021', '57', NULL, NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL, NULL, '3', NULL, NULL, NULL),
 (12302, '306', '2021', '60', NULL, NULL, NULL, NULL, '5', '6', '7', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12303, '836', '2021', '29', '1', '2', '3', '4', '5', '6', '7/8', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12303, '836', '2021', '29', '1', '2', '3', '4', '5', '6', '7/8', NULL, '9', NULL, NULL, NULL, NULL, NULL),
 (12304, '1425', '2021', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12305, '1187', '2021', '32', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12306, '1574', '2021', NULL, NULL, '47', 'Directorio', '48', NULL, '49', '50', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12306, '1574', '2021', NULL, NULL, '47', 'Directorio', '48', NULL, '49', '50', NULL, NULL, '51', NULL, NULL, NULL, NULL),
 (12307, '1', '2021', '118', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12308, '2', '2021', '118', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12309, '1218', '2021', NULL, NULL, NULL, '198', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12310, '38', '2021', '55', '525', '526', '527', '528', '529', '530', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12311, '137', '2021', '100', '1', '2*', '3', '4*', NULL, '6*', '7', '8*', NULL, NULL, NULL, NULL, NULL, '*Suplemento: Gas Processing'),
+(12309, '1218', '2021', NULL, NULL, NULL, '198', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '199', NULL, NULL, NULL),
+(12310, '38', '2021', '55', '525', '526', '527', '528', '529', '530', NULL, NULL, '531', '532', NULL, NULL, NULL, NULL),
+(12311, '137', '2021', '100', '1', '2*', '3', '4*', NULL, '6*', '7', '8*', '9', NULL, NULL, NULL, NULL, '*Suplemento: Gas Processing'),
 (12312, '1576', '2020', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2607', NULL, NULL),
-(12313, '1576', '2021', NULL, NULL, '2609', NULL, '2611', '2612', '2613', NULL, '2615', '2616', NULL, NULL, NULL, NULL, NULL),
+(12313, '1576', '2021', NULL, NULL, '2609', NULL, '2611', '2612', '2613', NULL, '2615', '2616', '2617', '2618', NULL, NULL, NULL),
 (12316, '14', '2021', '179', '1', NULL, '2', NULL, NULL, '4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12320, '1337', '2001', '6', '1', NULL, NULL, '2', NULL, NULL, NULL, NULL, '3', NULL, NULL, NULL, NULL, NULL),
-(12318, '1573', '2021', NULL, '120', NULL, '121', NULL, '122', '123', '124', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12318, '1573', '2021', NULL, '120', '121', '123', '124', '125', '126', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12319, '1568', '2021', NULL, NULL, NULL, NULL, '71', NULL, NULL, NULL, NULL, '72', NULL, NULL, NULL, NULL, NULL),
 (12321, '1337', '2002', '7', '1', NULL, NULL, '2', NULL, NULL, NULL, NULL, '3', NULL, NULL, '4 y Nº especial v.7 n.4', NULL, NULL),
 (12322, '1337', '2003', '8', '1', NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -12164,7 +12164,9 @@ INSERT INTO `coleccion` (`coleccion_id`, `id_revista`, `anyo`, `volumen`, `ene`,
 (12328, '630', '2021', NULL, NULL, NULL, NULL, NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12329, '1206', '2021', NULL, NULL, NULL, NULL, NULL, NULL, '180', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (12330, '1571', '2020', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '44', NULL, NULL, NULL, NULL),
-(12331, '1571', '2021', NULL, NULL, '45', NULL, NULL, '46', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(12331, '1571', '2021', NULL, NULL, '45', NULL, NULL, '46', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12332, '1476', '2020', '55', '1', '2', NULL, NULL, '3', '4', '5', '6', NULL, '7', '8', NULL, NULL, NULL),
+(12333, '1476', '2021', '56', '1', '2', NULL, '3', '4', NULL, '5', '6', NULL, '7', '8', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -26097,7 +26099,7 @@ INSERT INTO `revistas` (`titulo`, `ISSN`, `ISSN_version_e`, `editor`, `pais_orig
 ('LC.GC EUROPE : solutions for separation scientists', '1471-6577', '', 'Advanstar Communications', 'Reino Unido', '12', 'Ingeniería Química', 'Ingeniería Química', 'Biblioteca', 0, '', 0, '0', 0, '(1999)2000(2001)2002(2003).', 1, 'Biblioteca', 'http://www.lcgceurope.com/lcgceurope/', 'CROMATOGRAFIA', 1, 'http://fama.us.es/record=b1720632~S4*spi', '', 1, 1, 0, 'Hemeroteca', 0, 0, '', 0, '', 0, '', '', 1, 1, 'Inglés', 0, 0, 0, 'SWETS', '', 1374),
 ('ANNALS OF GEOPHYSICS', '1593-5213', '', 'Editrici Compositori', 'Italia', '6', 'Mecánica medios continuos', 'Mecánica', 'Biblioteca', 1, '', 0, '0', 0, '2002-2003(2004)2005-2006(2007-2009).', 1, 'Biblioteca', '', 'GEOFISICA', 0, NULL, NULL, 0, 0, 0, 'Hemeroteca', 0, 0, '', 0, '', 0, '', '', 1, 1, 'Inglés', 0, 0, 0, '', '', 1456),
 ('ISWA TIMES', '0906-1435', '', 'International Solid Waste Association', 'DK', '4', 'Ingeniería Química', 'Ingeniería Química', 'Departamento', 0, '', 0, 'MP', 0, '(2001).', 1, 'Ing. Química y Amb.', '', 'RESIDUOS INDUSTRIALES ; RESIDUOS-ELIMINACION', 1, NULL, NULL, 0, 1, 0, 'Departamento', 0, 0, '', 0, '', 1, '1', '', 1, 0, 'Inglés', 0, 0, 0, '', '', 1375),
-('JOURNAL OF STRAIN ANALYSIS FOR ENGINEERING DESIGN', '0309-3247', NULL, 'Professional Engineering Publishing Limited', 'Reino Unido', '8', 'Ingeniería Mecánica', 'Mecánica', 'Biblioteca', 1, '', 169, 'RC', 0, '2004-2010(2011, 2012, 2014-2019).', 1, 'Biblioteca', NULL, 'DEFORMACIONES (MECANICA)-MEDICION', 0, NULL, NULL, 0, 0, 0, 'Últimos números', 0, 0, NULL, 1, '2004-2019.', 0, '', NULL, 1, 1, 'Inglés', 0, 0, 0, 'EBSCO', '', 1476),
+('JOURNAL OF STRAIN ANALYSIS FOR ENGINEERING DESIGN', '0309-3247', NULL, 'Professional Engineering Publishing Limited', 'Reino Unido', '8', 'Ingeniería Mecánica', 'Mecánica', 'Biblioteca', 1, '', 169, 'RC', 0, '2004-2010(2011, 2012, 2014-2019)2020-', 1, 'Biblioteca', NULL, 'DEFORMACIONES (MECANICA)-MEDICION', 0, NULL, NULL, 0, 0, 0, 'Últimos números', 0, 0, NULL, 1, '2004-', 0, '', NULL, 1, 1, 'Inglés', 0, 0, 0, 'EBSCO', '', 1476),
 ('JOURNAL OF HYDRAULIC ENGINEERING', '0733-9429', '', 'American Society of Civil Engineers', 'Estados Unidos', '12', 'IIngeniería del diseño', 'Ingeniería del Diseño', 'Biblioteca', 0, '', 0, '0', 0, '(1987)88(89).', 1, 'Biblioteca', 'http://ojps.aip.org/hyo/', 'INGENIERIA HIDRAULICA', 1, NULL, NULL, 0, 1, 0, 'Hemeroteca', 0, 0, '', 0, '', 1, '1', '', 1, 1, 'Inglés', 0, 0, 0, '', '', 463),
 ('CHAUFFAGE, VENTILATION CONDITIONNEMENT', '0009-2029', '', '', 'Francia', '12', 'Ingeniería Energética', 'Termotecnia', 'Biblioteca', 0, '', 0, '0', 0, '(1978),1980-1983(1984).', 1, 'Biblioteca', '', 'CLIMATIZACION', 0, NULL, NULL, 0, 0, 0, 'Hemeroteca', 0, 0, '', 0, '', 0, '', '', 1, 0, 'Francés', 0, 0, 0, '', '', 467),
 ('COMPUTER TECHNOLOGY REVIEW', '0278-9647', '', 'West World Productions', 'Estados Unidos', '12', 'Tecnología Electrónica', 'Electrónica', 'Biblioteca', 0, '', 0, '0', 0, '(1982-1987).', 1, 'Biblioteca', 'http://www.wwpi.com/Home_CTR.asp', 'INFORMATICA', 1, 'http://fama.us.es/record=b1908399~S2*spi', 'http://global.umi.com/pqdlink?Ver=1&Exp=07-01-2003&REQ=3&Cert=QcIhOmMdLEnB8qgXLXZPMXEHQXiokeNwjpsZXRLctiQqD5QwNI3hsRsNCpXefSVCuZz2WwIGdD5B8taHeHYO%2fOmHqlhWCqWEHhujM0q31GI-&pub=15538', 0, 0, 0, 'Hemeroteca', 0, 0, '', 0, '', 0, '', '', 0, 0, 'Inglés', 0, 0, 0, '', '', 468),
