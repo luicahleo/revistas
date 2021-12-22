@@ -1,13 +1,13 @@
 @php
 $nav_links = [
     [
-        'name' => 'Home',
+        'name' => 'Inicio',
         'route' => route('home'),
         'active' => request()->routeIs('home'),
     ],
 
     [
-        'name' => 'Revistas',
+        'name' => 'Buscador de revistas',
         'route' => route('revistas.index'),
         'active' => request()->routeIs('revistas.*'),
     ],

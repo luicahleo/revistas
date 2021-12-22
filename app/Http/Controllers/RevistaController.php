@@ -50,6 +50,7 @@ class RevistaController extends Controller
      */
     public function show(Revista $revista)
     {
+        //return $revista;
         //$revista = Revista::find($id);
        // return $revista;
        //$revista = Revista::find($revista);

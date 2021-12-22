@@ -1,5 +1,7 @@
-<div class="pt-2 relative mx-auto text-gray-600">
 
+{{-- Componente Livewire 'Search' --}}
+
+<div class="pt-2 relative mx-auto text-gray-600">
 
     <form class="pt-2 relative mx-auto text-gray-600" autocomplete="off">
         <input wire:model="search"
@@ -16,7 +18,7 @@
             <ul class="absolute left-0 w-full bg-white mt-1 rounded-lg overflow-hidden">
                 @forelse ($this->results as $result)
                     <li class="leading-10 px-5 text-sm cursor-pointer hover:bg-gray-300 ">
-                        <a href="{{ route('revistas.show', $result) }}">{{ $result->titulo }}</a>
+                        <a href="{{ route('revistas.show', $result->id_revista) }}">{{ $result->titulo }}</a>
                     </li>
 
                 @empty
@@ -28,7 +30,6 @@
                 @endforelse
             </ul>
         @endif
-
 
     </form>
 

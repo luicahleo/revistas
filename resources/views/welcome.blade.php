@@ -10,22 +10,19 @@
 
                 <!-- component -->
                 <!-- This is an example component -->
-                <div class="pt-2 relative mx-auto text-gray-600">
+                {{-- <div class="pt-2 relative mx-auto text-gray-600">
 
                     @livewire('search')
 
-                </div>
+                </div> --}}
             </div>
 
         </div>
 
-
-
     </section>
 
-
-
-    <section class="mt-24 bg-gray-700 py-12">
+    {{-- seccion Listado de revistas --}}
+    {{-- <section class="mt-4 bg-gray-700 py-2">
 
         <h1 class="text-center text-white text-3xl">Listado de revistas</h1>
         <p class="text-center text-white">Consulta nuestro listado de todas las revistas</p>
@@ -40,10 +37,10 @@
         </div>
 
 
-    </section>
+    </section> --}}
 
 
-    <section class="mt-24 py-12">
+    <section class="mt-4 py-2">
 
         <h1 class="text-center text-gray-800 font-extrabold text-3xl">Últimas revistas</h1>
 
