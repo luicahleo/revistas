@@ -49,13 +49,16 @@ class ColeccionController extends Controller
      * @param  \App\Models\Coleccion  $coleccion
      * @return \Illuminate\Http\Response
      */
-    public function show(Coleccion $coleccion)
+    public function show($revista)
     {
-
-        $colecciones = Coleccion::where('id_revista',1490)->get();
-
-        //return $revista->id_revista;
+        TODO::
+        $colecciones = Coleccion::where('id_revista',$revista)->get();
+        
+        //return $revista;
         return $colecciones;
+        //return $revista->id_revista;
+        // return $coleccion;
+        // return $coleccion->id_revista;
 
         //return view('coleccion.show', compact('coleccion'));
     }
@@ -68,7 +71,7 @@ class ColeccionController extends Controller
      */
     public function edit(Coleccion $coleccion)
     {
-        //
+       
     }
 
     /**
