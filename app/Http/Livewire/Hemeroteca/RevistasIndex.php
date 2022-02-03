@@ -13,7 +13,24 @@ class RevistasIndex extends Component
     use WithPagination;
 
     public $search;
+    public $revista;
 
+    public $open_edit = false;
+
+
+    public function mount()
+    {
+        $this->revista = new Revista();
+    }
+
+
+    protected $rules = [
+        'revista.titulo' => 'required',
+        'revista.materia' => 'required',
+        'revista.editor' => 'required',
+
+
+    ];
     public function render()
     {
         $revistas = Revista::where('titulo', 'LIKE', '%' . $this->search . '%')
@@ -31,5 +48,12 @@ class RevistasIndex extends Component
     //para empezar a buscar desde la pagina 1
     public function limpiar_page(){
         $this->reset('page');
+    }
+
+    public function edit_volumen(Revista $revista)
+    {
+        $this->revista = $revista;
+        $this->open_edit = true;
+
     }
 }
