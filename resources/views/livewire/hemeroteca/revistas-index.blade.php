@@ -58,8 +58,12 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                     {{ $item->ISSN }}
                                 </td>
-                                <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}"
+                                <td>
+                                    <a href="{{ route('hemeroteca.collections.show', $item->id_revista) }}"
                                         class="btn btn-primary"><i class="fas fa-list"></i></a>
+                                </td>
+                                <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}"
+                                        class="btn btn-danger"><i class="fas fa-archive"></i></a>
                                 </td>
 
                                 {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

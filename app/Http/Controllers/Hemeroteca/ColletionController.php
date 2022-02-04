@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Hemeroteca;
 
+use App\Http\Controllers\Controller;
 use App\Models\Coleccion;
-use App\Models\Revista;
 use Illuminate\Http\Request;
 
-class ColeccionController extends Controller
+class ColletionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,7 @@ class ColeccionController extends Controller
      */
     public function index()
     {
-        $colecciones = Coleccion::all();
-
-        //return $colecciones;
-
-        return view('coleccion.index', compact('colecciones'));
+        return view('hemeroteca.collections.index');
     }
 
     /**
@@ -29,7 +25,9 @@ class ColeccionController extends Controller
      */
     public function create()
     {
-        //
+      return 'create';
+
+        //return view('hemeroteca.collections.create', compact('collection'));
     }
 
     /**
@@ -46,53 +44,53 @@ class ColeccionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Coleccion  $coleccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($revista)
+    public function show(Coleccion $collection)
     {
-        // TODO::
-        // $colecciones = Coleccion::where('id_revista',$revista)->get();
-        
-        // //return $revista;
-        // return $colecciones;
-        //return $revista->id_revista;
-        // return $coleccion;
-        // return $coleccion->id_revista;
+        //$collections = Coleccion::where('id_revista', $collection->coleccion_id)->get();
 
-        //return view('coleccion.show', compact('coleccion'));
+        //$collection = Coleccion::where('id_revista', $collection->coleccion_id);
+
+        //return $collection->coleccion_id;
+        //return $collections;
+
+        return view('hemeroteca.collections.show', compact('collection'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Coleccion  $coleccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Coleccion $coleccion)
+    public function edit(Coleccion $collection)
     {
-       
+        
+
+        return view('hemeroteca.collections.edit', compact('collection'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Coleccion  $coleccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Coleccion $coleccion)
+    public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Coleccion  $coleccion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Coleccion $coleccion)
+    public function destroy($id)
     {
         //
     }

@@ -59,6 +59,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('hemeroteca')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/hemeroteca.php'));
+
+            // Route::middleware('web', 'auth')
+            //     ->name('coleccion.')
+            //     ->prefix('coleccion')
+            //     ->namespace($this->namespace)
+            //     ->group(base_path('routes/coleccion.php'));
         });
     }
 
