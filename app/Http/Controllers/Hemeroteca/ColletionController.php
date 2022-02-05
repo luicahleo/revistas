@@ -25,9 +25,12 @@ class ColletionController extends Controller
      */
     public function create()
     {
-      return 'create';
+        //return $collection;
+        //$collection = Coleccion::all();
 
-        //return view('hemeroteca.collections.create', compact('collection'));
+        // return view('hemeroteca.collections.create', compact('collection'));
+        return view('hemeroteca.collections.create');
+
     }
 
     /**
@@ -38,7 +41,18 @@ class ColletionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        
+        //return $request;
+
+
+        $request->validate([
+            'id_revista'=>'required',
+            'anyo'=>'required',
+            'volumen'=>'required'
+         ]);
+
+        return $request;
     }
 
     /**
@@ -49,14 +63,15 @@ class ColletionController extends Controller
      */
     public function show(Coleccion $collection)
     {
-        //$collections = Coleccion::where('id_revista', $collection->coleccion_id)->get();
-
+        $collections = Coleccion::where('id_revista', $collection->coleccion_id)->get();
+        //dd($collections);
         //$collection = Coleccion::where('id_revista', $collection->coleccion_id);
 
         //return $collection->coleccion_id;
-        //return $collections;
 
-        return view('hemeroteca.collections.show', compact('collection'));
+        //return $collection;
+
+        return view('hemeroteca.collections.show', compact('collections','collection'));
     }
 
     /**

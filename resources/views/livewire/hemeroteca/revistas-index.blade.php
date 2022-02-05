@@ -30,7 +30,8 @@
                                 ISSN
                             </th>
                             <th></th>
-                            <th></th></th>
+                            <th></th>
+                            </th>
 
                         </tr>
                     </thead>
@@ -58,19 +59,20 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                     {{ $item->ISSN }}
                                 </td>
+                                <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}" class="btn btn-danger"><i
+                                            class="fas fa-archive"></i></a>
+                                </td>
                                 <td>
-                                    <a href="{{ route('hemeroteca.collections.show', $item->id_revista) }}"
-                                        class="btn btn-primary"><i class="fas fa-list"></i></a>
+                                    <a wire:click="create_collection" class="btn btn-primary"><i
+                                            class="fas fa-list"></i></a>
                                 </td>
-                                <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}"
-                                        class="btn btn-danger"><i class="fas fa-archive"></i></a>
-                                </td>
+
 
                                 {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a href="{{ route('hemeroteca.revistas.edit', $revista)}}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                 </td> --}}
-                                <td><a wire:click="edit_volumen({{ $item->id_revista }}) " class="btn btn-green"><i
-                                            class="fas fa-edit"></i></a></td>
+                                <td><a wire:click="edit_collection({{ $item->id_revista }}) "
+                                        class="btn btn-green"><i class="fas fa-edit"></i></a></td>
                             </tr>
                         @endforeach
                         <!-- More people... -->
@@ -92,7 +94,7 @@
         {{-- Modal edit --}}
         <x-jet-dialog-modal wire:model="open_edit">
             <x-slot name='title'>
-                Editar el post
+                Editar coleccion
             </x-slot>
 
             <x-slot name='content'>
@@ -141,5 +143,57 @@
             </x-slot>
         </x-jet-dialog-modal>
         {{-- fin modal edit --}}
+        {{-- Modal create --}}
+        <x-jet-dialog-modal wire:model="open_create">
+            <x-slot name='title'>
+                Crear coleccion
+            </x-slot>
+
+            <x-slot name='content'>
+
+                {{-- <div class="alert alert-warning" role="alert" wire:loading wire:target='image'>
+                Imagen cargando, espere hasta que se haya procesado!
+            </div> --}}
+
+                {{-- para mostrar imagenen al cargar --}}
+                {{-- @if ($image)
+                <img class="mb-4" src="{{ $image->temporaryUrl() }}" alt="">
+
+            @else
+                <img src="{{ Storage::url($post->image) }}" alt="">
+
+            @endif --}}
+
+
+                <div class="mb-4">
+                    <x-jet-label value="Titulo de la revista" />
+                    <x-jet-input type="text" class="w-full" wire:model="revista.titulo" />
+                </div>
+
+                <div class="mb-4">
+                    <x-jet-label value="Titulo de la materia" />
+                    <x-jet-input type="text" class="w-full" wire:model="revista.materia" />
+                </div>
+
+                <div class="mb-4">
+                    <x-jet-label value="Titulo del editor" />
+                    <x-jet-input type="text" class="w-full" wire:model="revista.editor" />
+                </div>
+            </x-slot>
+
+            <x-slot name='footer'>
+                <x-jet-secondary-button wire:click="$set('open_create', false)">Cacelar</x-jet-secondary-button>
+                {{-- wire:loading.attr='disabled' wire:target='save' class="disabled:opacity-50" .... esta linea es para
+            decirle que solo ejecute el metodo save
+            que desabilite el boton mientras esta cargando con una opacidad del 50 % --}}
+                {{-- wire:target='save, image' esto es para que desabilite cuando se graba o se esta cargando la imagen --}}
+                {{-- <x-jet-danger-button wire:click='update' wire:loading.attr='disabled' wire:target='save, image' --}}
+                <x-jet-danger-button class="disabled:opacity-50">
+                    Actualizar
+                </x-jet-danger-button>
+
+            </x-slot>
+        </x-jet-dialog-modal>
+        {{-- fin modal create --}}
     </div>
 </div>

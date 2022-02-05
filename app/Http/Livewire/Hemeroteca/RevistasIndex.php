@@ -16,6 +16,7 @@ class RevistasIndex extends Component
     public $revista;
 
     public $open_edit = false;
+    public $open_create = false;
 
 
     public function mount()
@@ -50,10 +51,17 @@ class RevistasIndex extends Component
         $this->reset('page');
     }
 
-    public function edit_volumen(Revista $revista)
+    public function edit_collection(Revista $revista)
     {
         $this->revista = $revista;
         $this->open_edit = true;
+
+    }
+
+    public function create_collection(Revista $revista)
+    {
+        $this->revista = $revista;
+        $this->open_create = true;
 
     }
 }

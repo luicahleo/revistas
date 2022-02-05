@@ -1,7 +1,5 @@
 <x-app-layout>
 
-
-
     <div class="pt-2 relative mx-auto text-gray-600">
 
         <ul>
@@ -160,8 +158,6 @@
                                     class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                                     required />
                             </span>
-                            
-                            
                         </div>
                         
                         <button type="submit"
