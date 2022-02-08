@@ -8,7 +8,7 @@ use Livewire\Component;
 class CreateCollection extends Component
 {
     public $collection;
-    public $open_collection = true;
+    public $open_collection = false;
 
     public  $id_revista,
             $anyo,
@@ -33,9 +33,27 @@ class CreateCollection extends Component
         return view('livewire.hemeroteca.create-collection', compact('collections'));
     }
 
-    public function create_collection($open)
+    public function create_collection($collection)
     {
-        $this->open = $open;
+        $this->collection = $collection;
+
+        //dd($collection);
+
+       // $this->open_collection = true;
+
+        Coleccion::create([
+            'id_revista' => $this->collection,
+            'anyo' => $this->anyo,
+            'volumen' => $this->volumen,
+            'ene' => $this->enero,
+            'feb' => $this->febrero,
+            'mar' => $this->marzo,
+            'abr' => $this->abril,
+            'may' => $this->mayo,
+            'jun' => $this->junio,
+            
+        ]);
+
 
     }
 }

@@ -13,4 +13,23 @@ class Coleccion extends Model
     protected $table = 'coleccion';
     protected $primaryKey = 'coleccion_id';
 
+
+    const CREATED_AT = null;
+    const UPDATED_AT = null;
+    public $timestamp = false;
+
+    protected $fillable = ['id_revista', 
+                            'anyo',
+                            'volumen', 
+                            'ene', 
+                            'feb', 
+                            'mar',
+                            'abr',
+                            'may',
+                            'jun',
+
+                        ];
+
+
+
 }

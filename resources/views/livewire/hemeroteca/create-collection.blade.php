@@ -26,7 +26,7 @@
                     Cancelar
                 </x-jet-secondary-button>
 
-                <x-jet-danger-button>
+                <x-jet-danger-button wire:click="create_collection({{$collection}})"> 
                     Crear coleccion
                 </x-jet-danger-button>
             </x-slot>
