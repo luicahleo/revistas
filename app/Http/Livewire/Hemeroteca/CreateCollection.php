@@ -39,3 +39,4 @@ class CreateCollection extends Component
 
     }
 }
+
