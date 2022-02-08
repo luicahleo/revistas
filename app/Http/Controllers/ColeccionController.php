@@ -51,11 +51,11 @@ class ColeccionController extends Controller
      */
     public function show($revista)
     {
-        TODO::
-        $colecciones = Coleccion::where('id_revista',$revista)->get();
+        // TODO::
+        // $colecciones = Coleccion::where('id_revista',$revista)->get();
         
-        //return $revista;
-        return $colecciones;
+        // //return $revista;
+        // return $colecciones;
         //return $revista->id_revista;
         // return $coleccion;
         // return $coleccion->id_revista;
