@@ -62,11 +62,14 @@
                                 <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}" class="btn btn-danger"><i
                                             class="fas fa-archive"></i></a>
                                 </td>
-                                <td>
+                                {{-- <td>
                                     <a wire:click="create_collection" class="btn btn-primary"><i
                                             class="fas fa-list"></i></a>
+                                </td> --}}
+                                <td>
+                                    <a href="{{ route('hemeroteca.collections.show', $item)}}" class="btn btn-primary"><i
+                                            class="fas fa-list"></i></a>
                                 </td>
-
 
                                 {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a href="{{ route('hemeroteca.revistas.edit', $revista)}}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
