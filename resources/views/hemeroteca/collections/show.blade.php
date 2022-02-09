@@ -44,6 +44,9 @@
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Nov.</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Dic.</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Observaciones</th>
+                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm"></th>
+                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm"></th>
+
 
                         </tr>
                     </thead>
@@ -81,7 +84,13 @@
                                 <td class="text-left py-3 px-4 text-white border-b bg-gray-700">
                                     {{ $fondo->observaciones }}
                                 </td>
-
+                                TODO::falata por hacer
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a class="btn btn-primary"><i wire:click="edit()"
+                                    class="fas fa-edit"></i></a></a>
+                                </td>
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a href="" class="btn btn-danger"><i
+                                    class="fas fa-trash"></i></a></a>
+                                </td>
                             </tr>
 
                         @endforeach

@@ -82,5 +82,10 @@ class CreateCollection extends Component
                 $this->emit('alert', 'El registro se creo satisfactoriamente');
 
     }
+
+    public function edit()
+    {
+        dd('prueba');
+    }
 }
 
