@@ -1,12 +1,12 @@
 <div>
     <div>
 
-        {{ $collections }}
+        {{-- {{ $collections }} --}}
 
         <div class="ml-20">
             <button wire:click="$set('open_collection', true)"
                 class="m-5 p-2 pl-5 py-5  bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
-                <a href="">Crear Coleccion</a></button>
+                Crear Coleccion</button>
         </div>
 
         <x-jet-dialog-modal wire:model="open_collection">
