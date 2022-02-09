@@ -20,6 +20,7 @@ class CreateCollection extends Component
             $mayo,
             $junio;
 
+
     public function mount($collection)
     {
         $this->collection = $collection;
@@ -54,6 +55,20 @@ class CreateCollection extends Component
             
         ]);
 
+        $this->reset(['open_collection'
+                    , 'id_revista'
+                    , 'anyo'
+                    , 'volumen'
+                    , 'enero'
+                    , 'febrero'
+                    , 'marzo'
+                    , 'abril'
+                    , 'mayo'
+                    , 'junio'
+
+                
+                
+                ]); 
 
     }
 }
