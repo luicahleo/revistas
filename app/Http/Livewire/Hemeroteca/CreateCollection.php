@@ -26,6 +26,12 @@ class CreateCollection extends Component
         $this->collection = $collection;
     }
 
+    protected $rules = [
+        'anyo' => 'required'
+    ];
+
+
+
     public function render()
     {
 
@@ -36,6 +42,9 @@ class CreateCollection extends Component
 
     public function create_collection($collection)
     {
+        $this->validate();
+
+
         $this->collection = $collection;
 
         //dd($collection);
