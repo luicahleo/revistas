@@ -24,7 +24,7 @@
                         <a href="">Crear Coleccion</a></button>
                 </div> --}}
                 <div>@livewire('hemeroteca.create-collection',['collection'=>$collection->coleccion_id])</div>
-                
+
                 <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-800 text-gray-200">
                     <thead class="bg-gray-800 text-white">
                         <tr>
@@ -43,7 +43,8 @@
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Oct.</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Nov.</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Dic.</th>
-                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Observaciones</th>
+                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Obs.</th>
+                            <th class="text-left py-3 px-4 uppercase font-semibold text-sm">ID Col.</th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm"></th>
                             <th class="text-left py-3 px-4 uppercase font-semibold text-sm"></th>
 
@@ -53,10 +54,11 @@
                     <tbody class="text-gray-700">
 
                         @foreach ($collections as $fondo)
-
                             <tr>
-                                <td class="w-1/3 text-left py-3 px-4 text-white border-b  bg-gray-700">{{ $fondo->anyo }}</td>
-                                <td class="w-1/3 text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->volumen }}</td>
+                                <td class="w-1/3 text-left py-3 px-4 text-white border-b  bg-gray-700">
+                                    {{ $fondo->anyo }}</td>
+                                <td class="w-1/3 text-left py-3 px-4 text-white border-b bg-gray-700">
+                                    {{ $fondo->volumen }}</td>
                                 <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->ene }}
                                 </td>
                                 <td class="text-left py-3 px-4 text-white border-b bg-gray-700">{{ $fondo->feb }}
@@ -84,25 +86,50 @@
                                 <td class="text-left py-3 px-4 text-white border-b bg-gray-700">
                                     {{ $fondo->observaciones }}
                                 </td>
-                                TODO::falata por hacer
-                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a class="btn btn-primary"><i wire:click="edit()"
-                                    class="fas fa-edit"></i></a></a>
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700">
+                                    {{ $fondo->coleccion_id }}
                                 </td>
-                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a href="" class="btn btn-danger"><i
-                                    class="fas fa-trash"></i></a></a>
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a
+                                        href="{{ route('hemeroteca.collections.edit', $fondo->coleccion_id) }}"
+                                        class="btn btn-primary"><i class="fas fa-edit"></i></a></a>
+                                </td>
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700">
+                                    <form action="{{route('hemeroteca.collections.destroy',$fondo->coleccion_id )}}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                    </form>
+
+
+                                    {{-- <a href="" class="btn btn-danger">
+                                        <i class="fas fa-trash">
+                                            <form action=""></form>
+                                        </i>
+                                    </a> --}}
                                 </td>
                             </tr>
-
                         @endforeach
 
                     </tbody>
                 </table>
                 <div class="mb-20"></div>
                 <!-- fill for tailwind preview bottom overflow -->
+                
             </ul>
+
+            <div class="container">
+                <button  class="m-5 p-2 py-5  bg-green-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
+                    <a href="{{route('hemeroteca.revistas.index')}}"> Volver </a>
+                  
+                </button>
+            </div>
+            
+          
+
         </div>
 
     </div>
+
 
     {{-- @livewire('hemeroteca.fondo-hemeroteca',['collection' => $collection]) --}}
 

@@ -3,10 +3,10 @@
 
         {{-- {{ $collections }} --}}
 
-        <div class="ml-20">
+        <div class="container">
             <button wire:click="$set('open_collection', true)"
-                class="m-5 p-2 pl-5 py-5  bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
-                Crear Coleccion</button>
+                class="m-5 p-2 py-5  bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
+                Crear Coleccion para la revista con id: {{$collection}}</button>
         </div>
 
         <x-jet-dialog-modal wire:model="open_collection">

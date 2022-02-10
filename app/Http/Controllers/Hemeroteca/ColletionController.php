@@ -82,7 +82,7 @@ class ColletionController extends Controller
      */
     public function edit(Coleccion $collection)
     {
-        
+        //return $collection;
 
         return view('hemeroteca.collections.edit', compact('collection'));
     }
@@ -94,9 +94,33 @@ class ColletionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Coleccion $collection)
     {
+        //return $request;
+
+        $collection->coleccion_id = $request->coleccion_id;
+        $collection->anyo = $request->anyo;
+        $collection->volumen = $request->volumen;
+        $collection->ene = $request->ene;
+        $collection->feb = $request->feb;
+        $collection->mar = $request->mar;
+        $collection->abr = $request->abr;
+        $collection->may = $request->may;
+        $collection->jun = $request->jun;
+        $collection->jul = $request->jul;
+        $collection->ago = $request->ago;
+        $collection->sep = $request->sep;
+        $collection->oct = $request->oct;
+        $collection->nov = $request->nov;
+        $collection->dic = $request->dic;
+        $collection->observaciones = $request->observaciones;
         
+        $collection->save();
+
+
+        return redirect()->route('hemeroteca.collections.show', $collection->id_revista);
+
+
     }
 
     /**
@@ -105,8 +129,10 @@ class ColletionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Coleccion $collection)
     {
-        //
+        $collection->delete();
+        return redirect()->route('hemeroteca.collections.show', $collection->id_revista);
+
     }
 }

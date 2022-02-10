@@ -27,7 +27,13 @@ class Coleccion extends Model
                             'abr',
                             'may',
                             'jun',
-
+                            'jul',
+                            'ago',
+                            'sep',
+                            'oct',
+                            'nov',
+                            'dic',
+                            'observaciones',
                         ];
 
 

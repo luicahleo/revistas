@@ -13,12 +13,19 @@ class CreateCollection extends Component
     public  $id_revista,
             $anyo,
             $volumen,
-            $enero,
-            $febrero,
-            $marzo,
-            $abril,
-            $mayo,
-            $junio;
+            $ene,
+            $feb,
+            $mar,
+            $abr,
+            $may,
+            $jun,
+            $jul,
+            $ago,
+            $sep,
+            $oct,
+            $nov,
+            $dic,
+            $observaciones;
 
 
     public function mount($collection)
@@ -55,12 +62,20 @@ class CreateCollection extends Component
             'id_revista' => $this->collection,
             'anyo' => $this->anyo,
             'volumen' => $this->volumen,
-            'ene' => $this->enero,
-            'feb' => $this->febrero,
-            'mar' => $this->marzo,
-            'abr' => $this->abril,
-            'may' => $this->mayo,
-            'jun' => $this->junio,
+            'ene' => $this->ene,
+            'feb' => $this->feb,
+            'mar' => $this->mar,
+            'abr' => $this->abr,
+            'may' => $this->may,
+            'jun' => $this->jun,
+            'jul' => $this->jul,
+            'ago' => $this->ago,
+            'sep' => $this->sep,
+            'oct' => $this->oct,
+            'nov' => $this->nov,
+            'dic' => $this->dic,
+            'observaciones' => $this->observaciones,
+
             
         ]);
 
@@ -68,24 +83,26 @@ class CreateCollection extends Component
                     , 'id_revista'
                     , 'anyo'
                     , 'volumen'
-                    , 'enero'
-                    , 'febrero'
-                    , 'marzo'
-                    , 'abril'
-                    , 'mayo'
-                    , 'junio'
+                    , 'ene'
+                    , 'feb'
+                    , 'mar'
+                    , 'abr'
+                    , 'may'
+                    , 'jun'
+                    , 'jul'
+                    , 'ago'
+                    , 'sep'
+                    , 'oct'
+                    , 'nov'
+                    , 'dic'
+                    , 'observaciones'
 
                 
                 
                 ]); 
 
-                $this->emit('alert', 'El registro se creo satisfactoriamente');
+                $this->emit('alert', 'Presione "OK" y refresque la pagina ');
 
     }
 
-    public function edit()
-    {
-        dd('prueba');
-    }
 }
-
