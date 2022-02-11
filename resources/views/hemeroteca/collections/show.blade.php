@@ -116,16 +116,6 @@
                 <!-- fill for tailwind preview bottom overflow -->
                 
             </ul>
-
-            <div class="container">
-                <button  class="m-5 p-2 py-5  bg-green-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
-                    <a href="{{route('hemeroteca.revistas.index')}}"> Volver </a>
-                  
-                </button>
-            </div>
-            
-          
-
         </div>
 
     </div>
