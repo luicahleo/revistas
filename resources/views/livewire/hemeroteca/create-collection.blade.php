@@ -2,14 +2,15 @@
     <div>
 
         {{-- {{ $collections }} --}}
-
+        {{-- {{$revista}} --}}
         <div class="container">
             <button wire:click="$set('open_collection', true)"
                 class="m-5 p-2 py-5  bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
-                Crear Coleccion para la revista con id: {{ $collection }}</button>
+                Crear Coleccion para la revista con id: {{ $collection }} <br>
+            <span class="text-xl text-bold">{{$revista->titulo}}</span></button>
                 <br>
             <button class="m-5 p-2 py-5  bg-red-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300">
-                <a href="{{ route('hemeroteca.revistas.index') }}"> Volver </a>
+                <a href="{{ route('hemeroteca.revistas.index') }}"><i class="fa fa-arrow-circle-left"> Volver </i> </a>
 
             </button>
         </div>

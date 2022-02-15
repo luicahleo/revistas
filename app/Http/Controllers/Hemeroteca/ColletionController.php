@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Hemeroteca;
 
 use App\Http\Controllers\Controller;
 use App\Models\Coleccion;
+use App\Models\Revista;
 use Illuminate\Http\Request;
 
 class ColletionController extends Controller
@@ -83,8 +84,9 @@ class ColletionController extends Controller
     public function edit(Coleccion $collection)
     {
         //return $collection;
-
-        return view('hemeroteca.collections.edit', compact('collection'));
+        $revista = Revista::find($collection->id_revista);
+        //return $revista;
+        return view('hemeroteca.collections.edit', compact('collection', 'revista'));
     }
 
     /**

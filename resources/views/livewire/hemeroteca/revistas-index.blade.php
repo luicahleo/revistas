@@ -5,92 +5,96 @@
             {{-- buscador --}}
             <div class="px-6 py-4 flex">
                 <input wire:keydown='limpiar_page' wire:model="search"
-                    class=" pl-4 w-full flex-1 shadow-sm focus:outline-none" placeholder="Ingrese nombre de revista...">
-                <a class="btn btn-danger ml-2 flex-1" href="{{ route('hemeroteca.revistas.create') }}">Insertar nueva
-                    revista</a>
+                    class=" pl-4 w-full flex-1 shadow-sm focus:outline-none" placeholder="Ingrese nombre de portada...">
+                <a class="btn btn-danger ml-2 flex-1" href="{{ route('hemeroteca.revistas.create') }}">Crear nueva
+                    portada</a>
             </div>
-            @if ($revistas->count())
-                <!--  tabla que muestra lista de revistas-->
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                TITULO REVISTA </th>
-                            <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                MATERIA
-                            </th>
-                            <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                EDITOR
-                            </th>
-                            <th scope="col"
-                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                ISSN
-                            </th>
-                            <th></th>
-                            <th></th>
-                            </th>
+            <div class="container">
 
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach ($revistas as $item)
+                @if ($revistas->count())
+                    <!--  tabla que muestra lista de revistas-->
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                {{ $item->titulo }}
+                                <th scope="col"
+                                    class=" py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    TITULO REVISTA </th>
+                                <th scope="col"
+                                    class=" py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    MATERIA
+                                </th>
+                                <th scope="col"
+                                    class=" py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    EDITOR
+                                </th>
+                                <th scope="col"
+                                    class=" py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    ISSN
+                                </th>
+                                <th></th>
+                                <th></th>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            @foreach ($revistas as $item)
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    {{ $item->titulo }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">{{ $item->materia }}</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">{{ $item->editor }}</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {{ $item->ISSN }}
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {{ $item->ISSN }}
-                                </td>
-                                <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}" class="btn btn-danger"><i
-                                            class="fas fa-archive"></i></a>
-                                </td>
-                                {{-- <td>
+                                    </td>
+                                    <td class=" py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">{{ $item->materia }}</div>
+                                    </td>
+                                    <td class=" py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">{{ $item->editor }}</div>
+                                    </td>
+                                    <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                                        {{ $item->ISSN }}
+                                    </td>
+                                    <td class=" py-4 whitespace-nowrap text-sm text-gray-500">
+                                        {{ $item->ISSN }}
+                                    </td>
+                                    <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}"
+                                            class="btn btn-danger"><i class="fas fa-archive"></i></a>
+                                    </td>
+                                    {{-- <td>
                                     <a wire:click="create_collection" class="btn btn-primary"><i
                                             class="fas fa-list"></i></a>
                                 </td> --}}
-                                <td>
-                                    <a href="{{ route('hemeroteca.collections.show', $item)}}" class="btn btn-primary"><i
-                                            class="fas fa-list"></i></a>
-                                </td>
+                                    <td>
+                                        <a href="{{ route('hemeroteca.collections.show', $item) }}"
+                                            class="btn btn-primary"><i class="fas fa-list"></i></a>
+                                    </td>
 
-                                {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a href="{{ route('hemeroteca.revistas.edit', $revista)}}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                 </td> --}}
-                                <td><a wire:click="edit_collection({{ $item->id_revista }}) "
-                                        class="btn btn-green"><i class="fas fa-edit"></i></a></td>
-                            </tr>
-                        @endforeach
-                        <!-- More people... -->
-                    </tbody>
-                </table>
+                                    <td><a wire:click="edit_collection({{ $item->id_revista }}) "
+                                            class="btn btn-green"><i class="fas fa-edit"></i></a></td>
+                                </tr>
+                            @endforeach
+                            <!-- More people... -->
+                        </tbody>
+                    </table>
 
-                <div class="px-6 py-4">
-                    {{ $revistas->links() }}
-                </div>
-            @else
-                <div class="px-6 py-4">
-                    No hay ningun registro coincidente...
-                </div>
+                    <div class="px-6 py-4">
+                        {{ $revistas->links() }}
+                    </div>
+                @else
+                    <div class="px-6 py-4">
+                        No hay ningun registro coincidente...
+                    </div>
 
-            @endif
+                @endif
+
+            </div>
 
         </x-table-responsive>
 

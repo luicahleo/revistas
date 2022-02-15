@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Hemeroteca;
 
 use App\Models\Coleccion;
+use App\Models\Revista;
 use Livewire\Component;
 
 class CreateCollection extends Component
@@ -43,8 +44,10 @@ class CreateCollection extends Component
     {
 
         $collections = Coleccion::where('id_revista', $this->collection)->get();
+        $revista = Revista::find($this->collection);
+        //dd($revista);
 
-        return view('livewire.hemeroteca.create-collection', compact('collections'));
+        return view('livewire.hemeroteca.create-collection', compact('collections', 'revista'));
     }
 
     public function create_collection($collection)

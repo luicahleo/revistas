@@ -89,15 +89,20 @@
                                 <td class="text-left py-3 px-4 text-white border-b bg-gray-700">
                                     {{ $fondo->coleccion_id }}
                                 </td>
-                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700"><a
+                                
+
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><a
                                         href="{{ route('hemeroteca.collections.edit', $fondo->coleccion_id) }}"
-                                        class="btn btn-primary"><i class="fas fa-edit"></i></a></a>
+                                        class="btn btn-primary"><i class="fas fa-edit" ></i></a></a>
                                 </td>
-                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700">
-                                    <form action="{{route('hemeroteca.collections.destroy',$fondo->coleccion_id )}}" method="POST">
+                                
+                                <td class="text-left py-3 px-4 text-white border-b bg-gray-700" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                                    <form action="{{ route('hemeroteca.collections.destroy', $fondo->coleccion_id) }}"
+                                        method="POST">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                                        <button type="submit" class="btn btn-danger"><i
+                                                class="fas fa-trash"></i></button>
                                     </form>
 
 
@@ -114,7 +119,7 @@
                 </table>
                 <div class="mb-20"></div>
                 <!-- fill for tailwind preview bottom overflow -->
-                
+
             </ul>
         </div>
 

@@ -7,8 +7,7 @@
 
             <div class="grid min-h-screen place-items-center">
                 <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-                    <h1 class="text-xl font-semibold">Rellene los campos necesarios para editar la coleccion <span
-                            class="font-normal"></span></h1>
+                    <h1 class="text-xl font-semibold">Rellene los campos necesarios para editar la coleccion de la revista: <br> <span class="text-xl text-bold"> {{$revista->titulo}} </span></h1>
                     <form class="mt-6" action="{{route('hemeroteca.collections.update',$collection)}}" method="POST">
                         @csrf
                         @method('put')
@@ -155,6 +154,7 @@
                             class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
                             Actualizar coleccion
                         </button>
+                        
 
                     </form>
                 </div>
