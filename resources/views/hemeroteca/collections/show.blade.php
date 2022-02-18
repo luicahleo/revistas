@@ -1,7 +1,7 @@
 <x-app-layout>
     <div>
         {{-- {{$collections}} --}}
-        <div class="pt-2 relative mx-auto text-gray-600">
+        <div class="pt-2 relative mx-auto text-gray-600 container" >
             <ul>
                 <style>
                     body {
