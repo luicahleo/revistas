@@ -5,8 +5,10 @@
             {{-- buscador --}}
             <div class=" container px-6 py-4 flex grid grid-cols-4 gap-4">
                 <input wire:keydown='limpiar_page' wire:model="search"
-                    class=" pl-4 w-full flex-1 shadow-sm focus:outline-none col-start-1 col-span-2 " placeholder="Ingrese nombre de portada...">
-                <a class="btn btn-danger ml-2 flex-1 col-end-5 col-span-1" href="{{ route('hemeroteca.revistas.create') }}">Crear nueva
+                    class=" pl-4 w-full flex-1 shadow-sm focus:outline-none col-start-1 col-span-2 "
+                    placeholder="Ingrese nombre de portada...">
+                <a class="btn btn-danger ml-2 flex-1 col-end-5 col-span-1"
+                    href="{{ route('hemeroteca.revistas.create') }}">Crear nueva
                     portada</a>
             </div>
             <div class="container">
@@ -31,9 +33,13 @@
                                     class=" py-3 text-left text-lg font-extrabold text-gray-700 uppercase tracking-wider">
                                     ISSN
                                 </th>
-                                <th scope="col" class=" py-3 text-left text-lg font-extrabold text-gray-700 uppercase tracking-wider">            </th>
-                                <th scope="col" class=" py-3 text-left text-lg font-extrabold text-gray-700 uppercase tracking-wider">             </th>
-                                
+                                <th scope="col"
+                                    class=" py-3 text-left text-lg font-extrabold text-gray-700 uppercase tracking-wider">
+                                </th>
+                                <th scope="col"
+                                    class=" py-3 text-left text-lg font-extrabold text-gray-700 uppercase tracking-wider">
+                                </th>
+
 
                             </tr>
                         </thead>
@@ -50,29 +56,44 @@
                                         </div>
                                     </td>
                                     <td class=" py-4 ">
-                                        <div class="text-sm text-gray-900 whitespace-pre-line">{{ $item->materia }}</div>
+                                        <div class="text-sm text-gray-900 whitespace-pre-line">{{ $item->materia }}
+                                        </div>
                                     </td>
                                     <td class=" py-4">
-                                        <div class="text-sm text-gray-900 whitespace-pre-line gap-6">{{ $item->editor }}</div>
+                                        <div class="text-sm text-gray-900 whitespace-pre-line gap-6">
+                                            {{ $item->editor }}</div>
                                     </td>
                                     <td class=" py-4  text-sm text-gray-500">
                                         {{ $item->ISSN }}
                                     </td>
-                                    
-                                    
+
+
                                     <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}"
-                                        class="btn btn-green " data-bs-toggle="tooltip" data-bs-placement="top" title="Editar Portada"><i class="fas fa-edit"></i></a></td>
-                                        <td><a href="{{ route('hemeroteca.revistas.edit', $item) }}"
-                                            class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar Portada"><i class="fas fa-archive"></i></a>
+                                            class="btn btn-green " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Editar Portada"><i class="fas fa-edit"></i></a></td>
+
+                                    <td>
+                                        {{-- <a href="{{ route('hemeroteca.revistas.destroy', $item) }}"
+                                            class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Eliminar Portada"><i class="fas fa-archive"></i></a> --}}
+                                            <form action="{{ route('hemeroteca.revistas.destroy', $item) }}"
+                                                method="POST">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="Eliminar Portada" ><i
+                                                        class="fas fa-trash"></i></button>
+                                            </form>
                                     </td>
-                                    
-                                        {{-- <td>
+
+                                    {{-- <td>
                                     <a wire:click="create_collection" class="btn btn-primary"><i
                                             class="fas fa-list"></i></a>
                                 </td> --}}
                                     <td>
                                         <a href="{{ route('hemeroteca.collections.show', $item) }}"
-                                            class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Colecciones de la Portada"><i class="fas fa-list"></i></a>
+                                            class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Colecciones de la Portada"><i class="fas fa-list"></i></a>
                                     </td>
 
                                     {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

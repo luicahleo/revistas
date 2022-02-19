@@ -42,7 +42,7 @@ class RevistaController extends Controller
     public function store(Request $request)
     {
 
-       // return $request;
+        //return $request;
 
 
         $request->validate([
@@ -52,6 +52,8 @@ class RevistaController extends Controller
             'materia' => 'required',
             'editor' => 'required',
             'ISSN' => 'required',
+            'id_responsable' => 'required|numeric',
+
 
 
         ]);
@@ -105,7 +107,7 @@ class RevistaController extends Controller
 
         $revista->update($request->all());
 
-        return redirect()->route('hemeroteca.revistas.edit' , $revista);
+        return redirect()->route('hemeroteca.revistas.index' , $revista);
     }
 
     /**
@@ -116,6 +118,9 @@ class RevistaController extends Controller
      */
     public function destroy(Revista $revista)
     {
-        //
+        //return $revista;
+
+        $revista->delete();
+        return redirect()->route('hemeroteca.revistas.index');
     }
 }

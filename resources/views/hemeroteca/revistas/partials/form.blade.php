@@ -52,7 +52,7 @@
 <div class="mb-4">
     {!! Form::label('editor', 'Editor') !!}
     {!! Form::text('editor', null, ['class' => 'form-input rounded-lg block w-full mt-1' . ($errors->has('editor') ? ' border-red-600' : '')]) !!}
-   
+
     @error('editor')
         <strong class="text-xs text-red-600">{{ $message }}</strong>
     @enderror
@@ -75,6 +75,9 @@
     <div>
         {!! Form::label('id_responsable', 'Unidad solicitante') !!}
         {!! Form::text('id_responsable', null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
+        @error('id_responsable')
+        <strong class="text-xs text-red-600">{{ $message }}</strong>
+    @enderror
     </div>
 
     <div>
@@ -115,15 +118,15 @@
 <div class="grid grid-cols-4 mb-4">
     <div>
         {!! Form::label('suscripcion_papel', 'Suscripcion papel', ['class' => 'inline-flex items-center']) !!}
-        {!! Form::checkbox('suscripcion_papel', null, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+        {!! Form::checkbox('suscripcion_papel', 1, null,['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded'] ) !!}
     </div>
     <div>
         {!! Form::label('anyo_papel', 'Periodo papel') !!}
         {!! Form::text('anyo_papel', null, ['class' => 'form-input block mt-1 rounded-lg']) !!}
     </div>
     <div>
-        {!! Form::label('suscripcion_papel', 'Suscripcion Electronica', ['class' => 'inline-flex items-center']) !!}
-        {!! Form::checkbox('suscripcion_papel', null, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+        {!! Form::label('pack_electronico', 'Suscripcion Electronica', ['class' => 'inline-flex items-center']) !!}
+        {!! Form::checkbox('pack_electronico', 1, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
     </div>
     <div>
         {!! Form::label('anyo_electronico', 'Periodo electronica') !!}
@@ -139,15 +142,15 @@
 <div class="grid grid-cols-3 mb-4">
     <div>
         {!! Form::label('web', 'Disponible de web', ['class' => 'inline-flex items-center']) !!}
-        {!! Form::checkbox('web', null, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+        {!! Form::checkbox('web', 1, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
     </div>
     <div>
         {!! Form::label('indices_en_web', 'Indices en web', ['class' => 'inline-flex items-center']) !!}
-        {!! Form::checkbox('indices_en_web', null, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+        {!! Form::checkbox('indices_en_web', 1, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
     </div>
     <div>
         {!! Form::label('full_text_en_web', 'Texto completo en web', ['class' => 'inline-flex items-center']) !!}
-        {!! Form::checkbox('full_text_en_web', null, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
+        {!! Form::checkbox('full_text_en_web', 1, null, ['class' => 'mt-2 ml-8 flex text-indigo-500 w-8 h-8 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded']) !!}
     </div>
 </div>
 <div class="mb-4">
