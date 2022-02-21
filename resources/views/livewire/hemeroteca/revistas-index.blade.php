@@ -93,7 +93,7 @@
                                     <td>
                                         <a href="{{ route('hemeroteca.collections.show', $item) }}"
                                             class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Colecciones de la Portada"><i class="fas fa-list"></i></a>
+                                            title="Colecciones"><i class="fas fa-list"></i></a>
                                     </td>
 
                                     {{-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

@@ -26,6 +26,7 @@
     @apply bg-green-500 text-white;
 }
 
-.btn-green:hover {
+
+/* .btn-green:hover {
     @apply bg-green-700 hover: bg-green-500;
-}
+} */
